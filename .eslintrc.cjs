@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   env: { browser: true, es2020: true },
   extends: [
     "eslint:recommended",
@@ -8,8 +8,19 @@ export default {
   ],
   parserOptions: { ecmaVersion: "latest", sourceType: "module" },
   settings: { react: { version: "18.2" } },
-  plugins: ["react-refresh"],
+  plugins: ["react-refresh", "unused-imports"],
   rules: {
     "react-refresh/only-export-components": "warn",
+    "no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        vars: "all",
+        varsIgnorePattern: "^_",
+        args: "after-used",
+        argsIgnorePattern: "^_",
+      },
+    ],
   },
 };
