@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  width: 85vw;
+  /* delete for production */
+  border: 1px #ff0000 solid;
+  height: 60px;
+  vertical-align: center;
+  justify-content: space-between;
+}
+
+/* delete for production */
+.footer * {
+  border: 1px red solid;
+}
+
+.footer__image-aspect {
+  width: 40px;
+  height: 40px;
+}
