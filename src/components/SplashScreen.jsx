@@ -1,4 +1,5 @@
 import "../styles/splashscreen.css";
+import Footer from "./Footer";
 
 const SplashScreen = () => {
   return (
@@ -17,6 +18,7 @@ const SplashScreen = () => {
       <h2>Project Name</h2>
       <p>Enter / begin / insert coin image (flickering)</p>
       <p>Credits & Links</p>
+      <Footer />
     </div>
   );
 };
