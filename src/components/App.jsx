@@ -3,9 +3,20 @@ import "../styles/App.css";
 import SplashScreen from "./SplashScreen";
 
 function App() {
-  const [showSplashScreen, setshowSplashScreen] = useState(true);
+  const [showSplashScreen, setShowSplashScreen] = useState(true);
+
+  const handleChildClick = (value) => {
+    setShowSplashScreen(value);
+  };
+
   return (
-    <>{showSplashScreen ? <SplashScreen /> : <h1>Arcade Game Homepage</h1>}</>
+    <>
+      {showSplashScreen ? (
+        <SplashScreen onChildClick={handleChildClick} />
+      ) : (
+        <h1>Arcade Game Homepage</h1>
+      )}
+    </>
   );
 }
 
