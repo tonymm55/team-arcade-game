@@ -14,7 +14,7 @@ function App() {
       {showSplashScreen ? (
         <SplashScreen onChildClick={handleChildClick} />
       ) : (
-        <h1>Arcade Game Homepage</h1>
+        <h1>Arcade Game Homepage Component</h1>
       )}
     </>
   );
