@@ -17,3 +17,7 @@
   width: 40px;
   height: 40px;
 }
+
+.footer__image-aspect:hover {
+  cursor: pointer;
+}

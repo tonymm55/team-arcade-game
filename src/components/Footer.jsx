@@ -5,7 +5,7 @@ import "../styles/Footer.css";
 const Footer = () => {
   return (
     <footer className="footer" id="footer">
-      <p>footer</p>
+      <p>footer empty or contains game name</p>
       <img src={soundOn} alt="sound on icon" className="footer__image-aspect" />
       <img
         src={soundOff}
