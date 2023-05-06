@@ -5,6 +5,7 @@ const RunnerGame = () => {
     <div>
       <h1>Runner Game</h1>
       <RunnerParallaxBackground />
+      <p>Return to Game Select</p>
     </div>
   );
 };

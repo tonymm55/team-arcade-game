@@ -22,7 +22,7 @@ swiper-slide {
 }
 
 .homepage__thumbs {
-  height: 150px;
+  height: 10vh;
 }
 
 .homepage__thumbs .swiper-slide-thumb-active {
