@@ -1,0 +1,13 @@
+* {
+  border: 1px solid red;
+}
+
+.homepage {
+  width: 100vw;
+  height: 90vh;
+}
+
+swiper-container {
+  height: 100%;
+  width: 100%;
+}
