@@ -1,15 +1,19 @@
 import { register } from "swiper/element/bundle";
 import "../styles/Homepage.css";
 import Gamepage from "./Gamepage";
+import RunnerGame from "./RunnerGame/RunnerGame";
 
 register();
 
 const Homepage = () => {
   // make reusable component and pass in props to make the indivdual slides for games
   // put game data (title description) in .json pull in and pass into gamepage as props
+  // when game is selected, hide swiper carousel and load in game component
   return (
     <main className="homepage">
-      <h2>Homepage Component</h2>
+      <h2 className="homepage__title-center">
+        Dynamic Homepage Component title
+      </h2>
       <h3>log in component</h3>
       <div className="homepage__swiper">
         <swiper-container
@@ -22,6 +26,10 @@ const Homepage = () => {
           <swiper-slide>
             <Gamepage />
           </swiper-slide>
+          <swiper-slide>
+            <RunnerGame />
+          </swiper-slide>
+
           <swiper-slide>Game 2</swiper-slide>
           <swiper-slide>Game 3</swiper-slide>
           <swiper-slide>Game 4</swiper-slide>

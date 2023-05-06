@@ -28,3 +28,7 @@ swiper-slide {
 .homepage__thumbs .swiper-slide-thumb-active {
   opacity: 1 !important;
 }
+
+.homepage__title-center {
+  text-align: center;
+}
