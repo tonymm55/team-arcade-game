@@ -1,0 +1,34 @@
+.homepage * {
+  border: 1px solid red;
+}
+
+.homepage {
+  width: 100vw;
+  height: 90vh;
+}
+.homepage__swiper {
+  max-width: 80%;
+  height: 80vh;
+  margin: 0 auto;
+}
+
+.homepage__swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-slide {
+  text-align: center;
+}
+
+.homepage__thumbs {
+  height: 150px;
+}
+
+.homepage__thumbs .swiper-slide-thumb-active {
+  opacity: 1 !important;
+}
+
+.homepage__title-center {
+  text-align: center;
+}
