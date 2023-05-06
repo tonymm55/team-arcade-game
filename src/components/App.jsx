@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "../styles/App.css";
 import SplashScreen from "./SplashScreen";
+import Homepage from "./Homepage";
 
-function App() {
+const App = () => {
   const [showSplashScreen, setShowSplashScreen] = useState(true);
 
   const handleChildClick = (value) => {
@@ -14,10 +15,10 @@ function App() {
       {showSplashScreen ? (
         <SplashScreen onChildClick={handleChildClick} />
       ) : (
-        <h1>Arcade Game Homepage Component</h1>
+        <Homepage />
       )}
     </>
   );
-}
+};
 
 export default App;
