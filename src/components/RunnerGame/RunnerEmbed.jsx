@@ -10,12 +10,12 @@ const RunnerEmbed = () => {
         return;
       }
 
-      const data = JSON.parse(event.data);
-      if (data.type === "SCORE") {
-        setGameScore(data.payload);
+      const { runnerScore } = event.data;
+      if (runnerScore) {
+        setGameScore(runnerScore);
       }
 
-      console.log(data);
+      console.log(runnerScore);
     }
 
     window.addEventListener("message", handleMessage);
