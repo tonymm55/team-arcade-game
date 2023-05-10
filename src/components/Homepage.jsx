@@ -1,9 +1,11 @@
-import { register } from 'swiper/element/bundle';
-import '../styles/Homepage.css';
-import Gamepage from './Gamepage';
-import RunnerGame from './RunnerGame/RunnerGame';
+import { register } from "swiper/element/bundle";
+import "../styles/Homepage.css";
+import Gamepage from "./Gamepage";
+import RunnerGame from "./RunnerGame/RunnerGame";
+import RunnerEmbed from "./RunnerGame/RunnerEmbed";
 import SignIn from './authentication/SignIn';
 import SignOut from './authentication/SignOut';
+
 
 register();
 
@@ -27,6 +29,9 @@ const Homepage = () => {
           thumbs-swiper=".homepage__thumbs"
         >
           <swiper-slide>
+            <RunnerEmbed />
+          </swiper-slide>
+          <swiper-slide>
             <Gamepage />
           </swiper-slide>
           <swiper-slide>
@@ -36,16 +41,19 @@ const Homepage = () => {
           <swiper-slide>Game 2</swiper-slide>
           <swiper-slide>Game 3</swiper-slide>
           <swiper-slide>Game 4</swiper-slide>
+          <swiper-slide>Game 4</swiper-slide>
         </swiper-container>
         <swiper-container
           class="homepage__thumbs"
           slides-per-view="4"
+          pagination="true"
           watch-slides-progress="true"
           space-between={10}
         >
           <swiper-slide>Thumb 1</swiper-slide>
           <swiper-slide>Thumb 2</swiper-slide>
           <swiper-slide>Thumb 3</swiper-slide>
+          <swiper-slide>Thumb 4</swiper-slide>
           <swiper-slide>Thumb 4</swiper-slide>
         </swiper-container>
       </div>
