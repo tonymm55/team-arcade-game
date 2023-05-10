@@ -10,7 +10,7 @@ const RunnerEmbed = () => {
         return;
       }
 
-      const { runnerScore } = event.data;
+      const { runnerScore } = JSON.parse(event.data);
       if (runnerScore) {
         setGameScore(runnerScore);
       }
