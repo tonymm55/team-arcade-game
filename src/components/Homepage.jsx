@@ -3,6 +3,9 @@ import "../styles/Homepage.css";
 import Gamepage from "./Gamepage";
 import RunnerGame from "./RunnerGame/RunnerGame";
 import RunnerEmbed from "./RunnerGame/RunnerEmbed";
+import SignIn from './authentication/SignIn';
+import SignOut from './authentication/SignOut';
+
 
 register();
 
@@ -15,7 +18,8 @@ const Homepage = () => {
       <h2 className="homepage__title-center">
         Dynamic Homepage Component title
       </h2>
-      <h3>log in component</h3>
+      <SignIn />
+      <SignOut />
       <div className="homepage__swiper">
         <swiper-container
           class="homepage__swiper-container"

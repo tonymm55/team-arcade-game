@@ -1,7 +1,7 @@
-import { useState } from "react";
-import "../styles/App.css";
-import SplashScreen from "./SplashScreen";
-import Homepage from "./Homepage";
+import { useState } from 'react';
+import '../styles/App.css';
+import SplashScreen from './SplashScreen';
+import Homepage from './Homepage';
 
 const App = () => {
   const [showSplashScreen, setShowSplashScreen] = useState(true);
