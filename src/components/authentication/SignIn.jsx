@@ -16,6 +16,7 @@ function SignIn() {
         <button className="login-with-google-btn" onClick={signOutWithGoogle}>
           Sign Out
         </button>
+        <img src={localStorage.getItem('profilePic')} alt="Profile Pic" />
       </div>
     );
   }
