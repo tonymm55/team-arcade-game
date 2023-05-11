@@ -1,25 +1,20 @@
 import { signInWithGoogle } from '../../data/Firebase';
 import { signOutWithGoogle } from '../../data/Firebase';
+import { useState } from 'react';
 
-function SignIn() {
-  if (!localStorage.getItem('token')) {
-    return (
-      <div className="SignIn">
-        <button className="login-with-google-btn" onClick={signInWithGoogle}>
-          Sign In
-        </button>
-      </div>
-    );
-  } else {
-    return (
-      <div className="SignOut">
-        <button className="login-with-google-btn" onClick={signOutWithGoogle}>
-          Sign Out
-        </button>
-        <img src={localStorage.getItem('profilePic')} alt="Profile Pic" />
-      </div>
-    );
-  }
+export default function SignIn() {
+  // const [logInOut, setLogInOut] = useState('');
+  return (
+    <div className="SignIn">
+      <button
+        className="login-with-google-btn"
+        onClick={
+          !localStorage.getItem('token') ? signInWithGoogle : signOutWithGoogle
+        }
+      >
+        SignIn/SignOut
+        {/* {logInOut} */}
+      </button>
+    </div>
+  );
 }
-
-export default SignIn;
