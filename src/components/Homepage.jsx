@@ -4,6 +4,7 @@ import Gamepage from './Gamepage';
 import RunnerGame from './RunnerGame/RunnerGame';
 import RunnerEmbed from './RunnerGame/RunnerEmbed';
 import SignIn from './authentication/SignIn';
+import SignOut from './authentication/SignOut';
 
 register();
 
@@ -17,6 +18,7 @@ const Homepage = () => {
         Dynamic Homepage Component title
       </h2>
       <SignIn />
+      <SignOut />
       <div className="homepage__swiper">
         <swiper-container
           class="homepage__swiper-container"

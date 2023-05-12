@@ -24,6 +24,9 @@ export const signInWithGoogle = () => {
       const email = user.email;
       const profilePic = user.photoURL;
 
+      !localStorage.getItem('nickname')
+        ? localStorage.setItem('nickname', name)
+        : localStorage.getItem('nickname');
       localStorage.setItem('token', token);
       localStorage.setItem('name', name);
       localStorage.setItem('email', email);
@@ -32,6 +35,7 @@ export const signInWithGoogle = () => {
       console.log('name', name);
       console.log('email', email);
       console.log('profilePic', profilePic);
+      window.location.reload();
     })
     .catch(function (error) {
       console.log(error.code);
@@ -42,11 +46,9 @@ export const signInWithGoogle = () => {
 export const signOutWithGoogle = () => {
   auth.signOut().then(
     () => {
-      localStorage.clear('token');
-      localStorage.clear('name');
-      localStorage.clear('email');
-      localStorage.clear('profilePic');
+      localStorage.clear();
       console.log('Signout Succesfull');
+      window.location.reload();
     },
     (error) => {
       console.log('Signout Failed' + error);
