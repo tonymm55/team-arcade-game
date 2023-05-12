@@ -1,7 +1,6 @@
 import { register } from "swiper/element/bundle";
 import "../styles/Homepage.css";
 import Gamepage from "./Gamepage";
-import RunnerGame from "./RunnerGame/RunnerGame";
 import RunnerEmbed from "./RunnerGame/RunnerEmbed";
 
 register();
@@ -15,7 +14,6 @@ const Homepage = () => {
       <h2 className="homepage__title-center">
         Dynamic Homepage Component title
       </h2>
-      <h3>log in component</h3>
       <div className="homepage__swiper">
         <swiper-container
           class="homepage__swiper-container"
@@ -30,10 +28,7 @@ const Homepage = () => {
           <swiper-slide>
             <Gamepage />
           </swiper-slide>
-          <swiper-slide>
-            <RunnerGame />
-          </swiper-slide>
-
+          <swiper-slide>Game Placeholder</swiper-slide>
           <swiper-slide>Game 2</swiper-slide>
           <swiper-slide>Game 3</swiper-slide>
           <swiper-slide>Game 4</swiper-slide>
