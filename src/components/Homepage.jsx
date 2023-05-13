@@ -36,7 +36,6 @@ const Homepage = () => {
           </swiper-slide>
           <swiper-slide>
             <Gamepage props={gameData} />
-            <Gamepage />
           </swiper-slide>
           <swiper-slide>
             <TetrisEmbed />
