@@ -5,5 +5,12 @@
     "builtWith": ["HTML", "CSS", "Vanilla Javascript"],
     "backgroundImg": "",
     "thumbImg": ""
+  },
+  {
+    "title": "Tetris",
+    "description": "Blocks fall down and you must make a horizontal line to score points, the more points you score the faster blocks fall.",
+    "builtWith": ["React"],
+    "backgroundImg": "",
+    "thumbImg": ""
   }
 ]
