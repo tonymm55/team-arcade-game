@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+// import RunnerScoreboard from '../Scoreboards/RunnerScoreboard';
 
 const RunnerEmbed = () => {
   const [gameScore, setGameScore] = useState(null);
@@ -37,13 +38,16 @@ const RunnerEmbed = () => {
   }, [gameScore]);
 
   return (
-    <iframe
-      title="Runner Game"
-      src="https://arcade-game-runner.netlify.app/"
-      width={800}
-      height={720}
-      className="runner-game-embed"
-    ></iframe>
+    <>
+      <iframe
+        title="Runner Game"
+        src="https://arcade-game-runner.netlify.app/"
+        width={800}
+        height={720}
+        className="runner-game-embed"
+      ></iframe>
+      {/* <RunnerScoreboard /> */}
+    </>
   );
 };
 
