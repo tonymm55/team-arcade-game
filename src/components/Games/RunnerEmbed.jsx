@@ -6,16 +6,14 @@ const RunnerEmbed = () => {
   useEffect(() => {
     function handleMessage(event) {
       if (event.origin !== "https://arcade-game-runner.netlify.app") {
-        // Ignore messages from other domains
         return;
       }
 
       const { runnerScore } = JSON.parse(event.data);
+      console.log(runnerScore);
       if (runnerScore) {
         setGameScore(runnerScore);
       }
-
-      console.log(runnerScore);
     }
 
     window.addEventListener("message", handleMessage);

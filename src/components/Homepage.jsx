@@ -1,7 +1,8 @@
 import { register } from "swiper/element/bundle";
 import "../styles/Homepage.css";
 import Gamepage from "./Gamepage";
-import RunnerEmbed from "./RunnerGame/RunnerEmbed";
+import RunnerEmbed from "./Games/RunnerEmbed";
+import TetrisEmbed from "./Games/TetrisEmbed";
 import gameData from "../assets/Site/gamedata.json";
 
 register();
@@ -10,7 +11,7 @@ const Homepage = () => {
   // make reusable component and pass in props to make the indivdual slides for games
   // put game data (title description) in .json pull in and pass into gamepage as props
   // when game is selected, hide swiper carousel and load in game component
-  console.log(gameData);
+  // console.log(gameData);
   return (
     <main className="homepage">
       <h2 className="homepage__title-center">
@@ -28,9 +29,11 @@ const Homepage = () => {
             <RunnerEmbed />
           </swiper-slide>
           <swiper-slide>
-            <Gamepage />
+            <Gamepage props={gameData} />
           </swiper-slide>
-          <swiper-slide>Game Placeholder</swiper-slide>
+          <swiper-slide>
+            <TetrisEmbed />
+          </swiper-slide>
           <swiper-slide>Game 2</swiper-slide>
           <swiper-slide>Game 3</swiper-slide>
           <swiper-slide>Game 4</swiper-slide>
