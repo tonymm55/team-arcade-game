@@ -18,7 +18,9 @@ const Gamepage = ({ props }) => {
       <CSSIcon height={50} width={50} />
       <VJSIcon height={50} width={50} />
       <ReactIcon height={50} width={50} />
-      <button type="button">Start Game</button>
+      <button type="button" className="gamepage__start-btn">
+        Start Game
+      </button>
     </div>
   );
 };
