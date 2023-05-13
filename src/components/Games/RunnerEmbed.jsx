@@ -1,25 +1,38 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const RunnerEmbed = () => {
   const [gameScore, setGameScore] = useState(null);
 
   useEffect(() => {
     function handleMessage(event) {
-      if (event.origin !== "https://arcade-game-runner.netlify.app") {
+      if (event.origin !== 'https://arcade-game-runner.netlify.app') {
         return;
       }
 
       const { runnerScore } = JSON.parse(event.data);
-      console.log(runnerScore);
       if (runnerScore) {
         setGameScore(runnerScore);
       }
+      console.log(localStorage.getItem('nickname'));
+      console.log(runnerScore);
+      const data = {
+        name: localStorage.getItem('nickname'),
+        score: runnerScore,
+        img: localStorage.getItem('profilePic'),
+      };
+      axios
+        .post('https://arcade-backend.onrender.com/scoreboard/run/add', data)
+        .then((response) => console.log(response))
+        .catch((err) => {
+          console.log(err);
+        });
     }
 
-    window.addEventListener("message", handleMessage);
+    window.addEventListener('message', handleMessage);
 
     return () => {
-      window.removeEventListener("message", handleMessage);
+      window.removeEventListener('message', handleMessage);
     };
   }, [gameScore]);
 

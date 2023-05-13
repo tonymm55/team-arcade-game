@@ -1,9 +1,12 @@
-import { register } from "swiper/element/bundle";
-import "../styles/Homepage.css";
-import Gamepage from "./Gamepage";
-import RunnerEmbed from "./Games/RunnerEmbed";
-import TetrisEmbed from "./Games/TetrisEmbed";
-import gameData from "../assets/Site/gamedata.json";
+import { register } from 'swiper/element/bundle';
+import '../styles/Homepage.css';
+import Gamepage from './Gamepage';
+import RunnerEmbed from './Games/RunnerEmbed';
+import TetrisEmbed from './Games/TetrisEmbed';
+import gameData from '../assets/Site/gamedata.json';
+import SignIn from './authentication/SignIn';
+import SignOut from './authentication/SignOut';
+import NickName from './authentication/NickName';
 
 register();
 
@@ -17,6 +20,9 @@ const Homepage = () => {
       <h2 className="homepage__title-center">
         Dynamic Homepage Component title
       </h2>
+      <NickName />
+      <SignIn />
+      <SignOut />
       <div className="homepage__swiper">
         <swiper-container
           class="homepage__swiper-container"
@@ -30,13 +36,13 @@ const Homepage = () => {
           </swiper-slide>
           <swiper-slide>
             <Gamepage props={gameData} />
+            <Gamepage />
           </swiper-slide>
           <swiper-slide>
             <TetrisEmbed />
           </swiper-slide>
           <swiper-slide>Game 2</swiper-slide>
           <swiper-slide>Game 3</swiper-slide>
-          <swiper-slide>Game 4</swiper-slide>
           <swiper-slide>Game 4</swiper-slide>
         </swiper-container>
         <swiper-container
@@ -50,7 +56,7 @@ const Homepage = () => {
           <swiper-slide>Thumb 2</swiper-slide>
           <swiper-slide>Thumb 3</swiper-slide>
           <swiper-slide>Thumb 4</swiper-slide>
-          <swiper-slide>Thumb 4</swiper-slide>
+          <swiper-slide>Thumb 5</swiper-slide>
         </swiper-container>
       </div>
     </main>
