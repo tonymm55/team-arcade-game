@@ -28,7 +28,7 @@ const TetrisEmbed = () => {
   return (
     <iframe
       title="Tetris Game"
-      width={800}
+      width={700}
       height={900}
       className="tetris-game-embed"
       src="https://main--glittering-parfait-b48aaf.netlify.app/"
