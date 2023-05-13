@@ -14,10 +14,10 @@ const Gamepage = ({ props }) => {
       <p>{gameInfo.description}</p>
       <p>image background</p>
       <p>Built with: [icons]</p>
-      <Html />
-      <CSSIcon />
-      <VJSIcon />
-      <ReactIcon />
+      <Html height={50} width={50} />
+      <CSSIcon height={50} width={50} />
+      <VJSIcon height={50} width={50} />
+      <ReactIcon height={50} width={50} />
       <button type="button">Start Game</button>
     </div>
   );
