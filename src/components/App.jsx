@@ -1,12 +1,24 @@
-import { useState } from "react";
-import "../styles/App.css";
+import { useState } from 'react';
+import '../styles/App.css';
+import SplashScreen from './SplashScreen';
+import Homepage from './Homepage';
 
-function App() {
+const App = () => {
+  const [showSplashScreen, setShowSplashScreen] = useState(true);
+
+  const handleChildClick = (value) => {
+    setShowSplashScreen(value);
+  };
+
   return (
     <>
-      <h1>Arcade Game Homepage</h1>
+      {showSplashScreen ? (
+        <SplashScreen onChildClick={handleChildClick} />
+      ) : (
+        <Homepage />
+      )}
     </>
   );
-}
+};
 
 export default App;
