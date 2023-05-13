@@ -1,0 +1,9 @@
+[
+  {
+    "title": "Runner",
+    "description": "Jump over the incoming slime enemies by using the arrow keys on your keyboard. You have 3 lives and you lose a life every time you collide with an enemy. The game ends if you lose all three lives.",
+    "builtWith": ["HTML", "CSS", "Vanilla Javascript"],
+    "backgroundImg": "",
+    "thumbImg": ""
+  }
+]
