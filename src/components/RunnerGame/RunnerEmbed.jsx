@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const RunnerEmbed = () => {
   const [gameScore, setGameScore] = useState(null);
@@ -14,8 +15,19 @@ const RunnerEmbed = () => {
       if (runnerScore) {
         setGameScore(runnerScore);
       }
-
+      console.log(localStorage.getItem('nickname'));
       console.log(runnerScore);
+      const data = {
+        name: localStorage.getItem('nickname'),
+        score: runnerScore,
+        img: localStorage.getItem('profilePic'),
+      };
+      axios
+        .post('https://arcade-backend.onrender.com/scoreboard/run/add', data)
+        .then((response) => console.log(response))
+        .catch((err) => {
+          console.log(err);
+        });
     }
 
     window.addEventListener('message', handleMessage);
