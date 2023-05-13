@@ -7,7 +7,6 @@ const RunnerEmbed = () => {
   useEffect(() => {
     function handleMessage(event) {
       if (event.origin !== 'https://arcade-game-runner.netlify.app') {
-        // if (event.origin !== 'https://tsv-stacks.github.io/runner-game-two/') {
         return;
       }
 
@@ -41,7 +40,6 @@ const RunnerEmbed = () => {
     <iframe
       title="Runner Game"
       src="https://arcade-game-runner.netlify.app/"
-      // src="https://tsv-stacks.github.io/runner-game-two/"
       width={800}
       height={720}
       className="runner-game-embed"
