@@ -3,14 +3,19 @@ import { useState } from 'react';
 const NickName = () => {
   const [scoreName, setScoreName] = useState(localStorage.getItem('nickname'));
   const handleInputChange = (event) => setScoreName(event.target.value);
-  //   if (!localStorage.getItem('nickname'))
+  const handleSubmit = () => {
+    localStorage.setItem('nickname', scoreName);
+  };
   return (
     <>
-      <input type="text" onChange={handleInputChange} value={scoreName} />
-      <button
-        type="submit"
-        onClick={localStorage.setItem('nickname', scoreName)}
-      >
+      <input
+        type="text"
+        id="name-input"
+        placeholder="Enter your name"
+        onChange={handleInputChange}
+        value={scoreName}
+      />
+      <button type="submit" onClick={handleSubmit}>
         Set Nickname
       </button>
     </>
