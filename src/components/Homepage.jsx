@@ -40,9 +40,8 @@ const Homepage = () => {
           <swiper-slide>
             <TetrisEmbed />
           </swiper-slide>
-          <swiper-slide>Game 2</swiper-slide>
-          <swiper-slide>Game 3</swiper-slide>
           <swiper-slide>Game 4</swiper-slide>
+          <swiper-slide>Game 5</swiper-slide>
         </swiper-container>
         <swiper-container
           class="homepage__thumbs"
@@ -51,11 +50,12 @@ const Homepage = () => {
           watch-slides-progress="true"
           space-between={10}
         >
-          <swiper-slide>Thumb 1</swiper-slide>
-          <swiper-slide>Thumb 2</swiper-slide>
-          <swiper-slide>Thumb 3</swiper-slide>
+          <swiper-slide>Runner Thumb</swiper-slide>
+          <swiper-slide>Runner GamePage Thumb</swiper-slide>
+          <swiper-slide>Tetris</swiper-slide>
           <swiper-slide>Thumb 4</swiper-slide>
           <swiper-slide>Thumb 5</swiper-slide>
+          <swiper-slide>Thumb 6</swiper-slide>
         </swiper-container>
       </div>
     </main>
