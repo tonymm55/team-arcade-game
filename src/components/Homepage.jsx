@@ -7,7 +7,7 @@ import gameData from '../assets/Site/gamedata.json';
 import SignIn from './authentication/SignIn';
 import SignOut from './authentication/SignOut';
 import NickName from './authentication/NickName';
-// import RunnerScoreboard from './Scoreboards/RunnerScoreboard';
+import RunnerScoreboard from './Scoreboards/RunnerScoreboard';
 
 register();
 
@@ -32,9 +32,9 @@ const Homepage = () => {
           //   pagination="true"
           thumbs-swiper=".homepage__thumbs"
         >
-          {/* <swiper-slide>
+          <swiper-slide>
             <RunnerScoreboard />
-          </swiper-slide> */}
+          </swiper-slide>
           <swiper-slide>
             <RunnerEmbed />
           </swiper-slide>
