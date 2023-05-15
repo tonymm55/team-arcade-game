@@ -1,10 +1,11 @@
 import { useState } from 'react';
 
-const NickName = () => {
+const NickName = ({ setNickname }) => {
   const [scoreName, setScoreName] = useState(localStorage.getItem('nickname'));
   const handleInputChange = (event) => setScoreName(event.target.value);
   const handleSubmit = () => {
     localStorage.setItem('nickname', scoreName);
+    setNickname(scoreName);
   };
   return (
     <>

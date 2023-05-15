@@ -1,12 +1,12 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-const RunnerScoreboard = () => {
+const TetrisScoreboard = () => {
   const [gameStates, setGameStates] = useState(null);
 
   const fetchData = async () => {
     const response = await axios.get(
-      'https://arcade-backend.onrender.com/scoreboard/run'
+      'https://arcade-backend.onrender.com/scoreboard/tetris'
     );
     const data = Object.keys(response.data).map((item) => response.data[item]);
     setGameStates(data);
@@ -34,4 +34,4 @@ const RunnerScoreboard = () => {
   );
 };
 
-export default RunnerScoreboard;
+export default TetrisScoreboard;

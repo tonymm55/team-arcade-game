@@ -10,6 +10,7 @@ import SignOut from './authentication/SignOut';
 import NickName from './authentication/NickName';
 import RunnerScoreboard from './Scoreboards/RunnerScoreboard';
 import TetrisScoreboard from './Scoreboards/TetrisScoreboard';
+import { useState } from 'react';
 
 register();
 
@@ -18,12 +19,13 @@ const Homepage = () => {
   // put game data (title description) in .json pull in and pass into gamepage as props
   // when game is selected, hide swiper carousel and load in game component
   // console.log(gameData);
+  const [nickname, setNickname] = useState(localStorage.getItem('nickname'));
   return (
     <main className="homepage">
       <h2 className="homepage__title-center">
         Dynamic Homepage Component title
       </h2>
-      <NickName />
+      {nickname && <NickName setNickname={setNickname} />}
       <SignIn />
       <SignOut />
       <div className="homepage__swiper">
@@ -38,7 +40,7 @@ const Homepage = () => {
             <RunnerScoreboard />
           </swiper-slide>
           <swiper-slide>
-            <RunnerGame />
+            <RunnerGame nickname={nickname} setNickname={setNickname} />
           </swiper-slide>
           <swiper-slide>
             <Gamepage props={gameData} />

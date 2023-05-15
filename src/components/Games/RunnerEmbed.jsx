@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import NickName from '../authentication/NickName';
 
 const RunnerEmbed = () => {
   const [gameScore, setGameScore] = useState(null);
-  // const [renderNickname, setRenderNickname] = useState();
   useEffect(() => {
     function handleMessage(event) {
       if (event.origin !== 'https://arcade-game-runner.netlify.app') {
@@ -39,24 +37,17 @@ const RunnerEmbed = () => {
       window.removeEventListener('message', handleMessage);
     };
   }, [gameScore]);
-  // setRenderNickname(!localStorage.getItem('nickname') ? false : true);
-  const renderNickname = !localStorage.getItem('nickname') ? false : true;
-  console.log('renderNickname true or false: ', renderNickname);
-  if (renderNickname) {
-    return (
-      <>
-        <iframe
-          title="Runner Game"
-          src="https://arcade-game-runner.netlify.app/"
-          width={800}
-          height={720}
-          className="runner-game-embed"
-        ></iframe>
-      </>
-    );
-  } else {
-    return <NickName />;
-  }
+  return (
+    <>
+      <iframe
+        title="Runner Game"
+        src="https://arcade-game-runner.netlify.app/"
+        width={800}
+        height={720}
+        className="runner-game-embed"
+      ></iframe>
+    </>
+  );
 };
 
 export default RunnerEmbed;
