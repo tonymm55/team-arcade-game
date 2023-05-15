@@ -1,13 +1,15 @@
 import { register } from 'swiper/element/bundle';
 import '../styles/Homepage.css';
 import Gamepage from './Gamepage';
-import RunnerEmbed from './Games/RunnerEmbed';
+// import RunnerEmbed from './Games/RunnerEmbed';
+import RunnerGame from './authentication/Game/RunnerGame';
 import TetrisEmbed from './Games/TetrisEmbed';
 import gameData from '../assets/Site/gamedata.json';
 import SignIn from './authentication/SignIn';
 import SignOut from './authentication/SignOut';
 import NickName from './authentication/NickName';
 import RunnerScoreboard from './Scoreboards/RunnerScoreboard';
+import TetrisScoreboard from './Scoreboards/TetrisScoreboard';
 
 register();
 
@@ -36,10 +38,13 @@ const Homepage = () => {
             <RunnerScoreboard />
           </swiper-slide>
           <swiper-slide>
-            <RunnerEmbed />
+            <RunnerGame />
           </swiper-slide>
           <swiper-slide>
             <Gamepage props={gameData} />
+          </swiper-slide>
+          <swiper-slide>
+            <TetrisScoreboard />
           </swiper-slide>
           <swiper-slide>
             <TetrisEmbed />
