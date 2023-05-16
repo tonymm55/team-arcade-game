@@ -2,7 +2,7 @@
   display: flex;
   width: 85vw;
   /* delete for production */
-  border: 1px #ff0000 solid;
+  border: 1px #be0072 solid;
   height: 60px;
   vertical-align: center;
   justify-content: space-between;
@@ -10,7 +10,7 @@
 
 /* delete for production */
 .footer * {
-  border: 1px red solid;
+  border: 1px #be0072 solid;
 }
 
 .footer__image-aspect {
