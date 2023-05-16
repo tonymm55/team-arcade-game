@@ -3,6 +3,7 @@ import axios from 'axios';
 
 const RunnerEmbed = () => {
   const [gameScore, setGameScore] = useState(null);
+
   useEffect(() => {
     function handleMessage(event) {
       if (event.origin !== 'https://arcade-game-runner.netlify.app') {

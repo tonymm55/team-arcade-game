@@ -22,12 +22,11 @@ const RunnerScoreboard = () => {
       <h3>High Scores: </h3>
       {topTenGameStates?.map((gameState, index) => (
         <div className="top-ten-scores" key={index}>
-          <h4>
+          <div className="scoreboard-points">
             <img className="top-ten-scores-image" src={gameState.img} />{' '}
-            <p className="name-and-score">
-              {gameState.name} : {gameState.score}
-            </p>
-          </h4>
+            <p className="name">{gameState.name}</p>
+            <p className="score">{gameState.score}</p>
+          </div>
         </div>
       ))}
     </div>
