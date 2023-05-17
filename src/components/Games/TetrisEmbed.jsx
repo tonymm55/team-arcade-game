@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const TetrisEmbed = () => {
-  const [tetrisScore, setTetrisScore] = useState(null);
+  const [gameScore, setGameScore] = useState(null);
 
   useEffect(() => {
     function handleTetris(event) {
@@ -10,23 +11,35 @@ const TetrisEmbed = () => {
         return;
       }
 
-      const { tetrisGameScore } = JSON.parse(event.data);
-      if (tetrisGameScore) {
-        setTetrisScore(tetrisGameScore);
+      const { tetrisScore } = JSON.parse(event.data);
+      if (tetrisScore) {
+        setGameScore(tetrisScore);
       }
       console.log(localStorage.getItem('nickname'));
-      console.log(tetrisGameScore);
+      console.log(tetrisScore);
 
       const data = {
         name: localStorage.getItem('nickname'),
-        score: tetrisGameScore,
+        score: tetrisScore,
         img: localStorage.getItem('profilePic'),
       };
       axios
         .post('https://arcade-backend.onrender.com/scoreboard/tetris/add', data)
-        .then((response) => console.log(response))
+        .then((response) => {
+          toast.promise(Promise.resolve(response), {
+            pending: 'Loading...',
+            success: 'Score submitted!',
+            closeOnClick: true,
+            draggable: false,
+            autoClose: 3000,
+          });
+        })
         .catch((err) => {
-          console.log(err);
+          toast.error(`${err.message}`, {
+            closeOnClick: true,
+            draggable: false,
+            autoClose: 3000,
+          });
         });
     }
 
@@ -35,11 +48,12 @@ const TetrisEmbed = () => {
     return () => {
       window.removeEventListener('message', handleTetris);
     };
-  }, [tetrisScore]);
+  }, [gameScore]);
 
   return (
     <iframe
       title="Tetris Game"
+      src="https://react-tetris-project.netlify.app"
       width={700}
       height={900}
       className="tetris-game-embed"
