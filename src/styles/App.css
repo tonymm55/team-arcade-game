@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 *,
 html,
 body {
@@ -5,9 +7,15 @@ body {
   margin: 0;
   padding: 0;
 }
+
 /* I couldn't get the mouse icon to change reliably but left it here in case we have time to go back and figure it out */
 
 /* body {
   cursor: url("/cursor.png"), pointer !important;
   cursor: url("/pointer.png"), auto !important;
 } */
+
+body {
+  width: 100vw;
+  height: 100vh;
+}

@@ -57,6 +57,7 @@ const TetrisEmbed = () => {
       width={700}
       height={900}
       className="tetris-game-embed"
+      src="https://react-tetris-project.netlify.app"
     ></iframe>
   );
 };

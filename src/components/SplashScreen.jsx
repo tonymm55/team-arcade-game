@@ -33,33 +33,117 @@ const SplashScreen = ({ onChildClick }) => {
         Temp Button
       </button>
       <div className="splashscreen__credits">
-        <p>Created by:</p>
-        <p>Anthony Moran</p>
-        <p>Matthew Giles</p>
+        <p className="splashscreen__credits-created">CREATED BY:</p>
+
+        <div className="splashscreen__credits-container">
+          <a
+            href="https://www.linkedin.com/in/anthonymmoran/"
+            target={'_blank'}
+            className="splashscreen__credits--clean-text splashscreen__credits-tony"
+            rel="noreferrer"
+          >
+            Anthony Moran
+          </a>
+          <div className="splashscreen__credits-icons">
+            <a
+              href="https://github.com/tonymm55"
+              target={'_blank'}
+              rel="noreferrer"
+            >
+              <GithubIcon
+                className={'splashscreen__credits-icons-img'}
+                color={'white'}
+                width={'30px'}
+                height={'30px'}
+              />
+            </a>
+            <a
+              target={'_blank'}
+              href="https://twitter.com/TonyMCodes"
+              rel="noreferrer"
+            >
+              <TwitterIcon
+                className={'splashscreen__credits-icons-img'}
+                color={'white'}
+                width={'30px'}
+                height={'30px'}
+              />
+            </a>
+          </div>
+        </div>
+
+        <div className="splashscreen__credits-container">
+          <a
+            href="https://www.linkedin.com/in/matthew-giles-83695646/"
+            target={'_blank'}
+            className="splashscreen__credits-matt splashscreen__credits--clean-text "
+            rel="noreferrer"
+          >
+            Matthew Giles
+          </a>
+          <div className="splashscreen__credits-icons">
+            <a
+              href="https://github.com/tsv-stacks"
+              target={'_blank'}
+              rel="noreferrer"
+            >
+              <GithubIcon
+                className={'splashscreen__credits-icons-img'}
+                color={'white'}
+                width={'30px'}
+                height={'30px'}
+              />
+            </a>
+            <a
+              target={'_blank'}
+              href="https://twitter.com/Matty92G"
+              rel="noreferrer"
+            >
+              <TwitterIcon
+                className={'splashscreen__credits-icons-img'}
+                color={'white'}
+                width={'30px'}
+                height={'30px'}
+              />
+            </a>
+          </div>
+        </div>
 
         <div className="splashscreen__credits-container">
           <a
             href="https://www.linkedin.com/in/tarndeep-virdi/"
             target={'_blank'}
-            className="splashscreen__credits-tarndeep"
+            className="splashscreen__credits-tarndeep splashscreen__credits--clean-text "
             rel="noreferrer"
           >
             Tarndeep Virdi
           </a>
-          <a
-            href="https://github.com/tsv-stacks"
-            target={'_blank'}
-            rel="noreferrer"
-          >
-            <GithubIcon color={'white'} />
-          </a>
-          <a
-            target={'_blank'}
-            href="https://twitter.com/tsv_stacks"
-            rel="noreferrer"
-          >
-            <TwitterIcon color={'white'} />
-          </a>
+          <div className="splashscreen__credits-icons">
+            <a
+              href="https://github.com/tsv-stacks"
+              target={'_blank'}
+              rel="noreferrer"
+            >
+              <GithubIcon
+                className={'splashscreen__credits-icons-img'}
+                color={'white'}
+                width={'30px'}
+                height={'30px'}
+              />
+            </a>
+            <a
+              target={'_blank'}
+              href="https://twitter.com/tsv_stacks"
+              rel="noreferrer"
+            >
+              <TwitterIcon
+                className={'splashscreen__credits-icons-img'}
+                color={'white'}
+                width={'30px'}
+                height={'30px'}
+              />
+            </a>
+          </div>
         </div>
       </div>
 

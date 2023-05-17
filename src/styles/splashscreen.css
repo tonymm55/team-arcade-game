@@ -1,3 +1,11 @@
+:root {
+  --fandango: #a52882ff;
+  --penn-blue: #0d1945ff;
+  --tyrian-purple: #711740ff;
+  --ultra-pink: #ff69fdff;
+  --polynesian-blue: #0c4693ff;
+}
+
 .splashscreen {
   width: 100vw;
   height: 100vh;
@@ -14,7 +22,33 @@
   border: 1px solid red;
 }
 
-.splashscreen__credits-tarndeep {
+.splashscreen__credits {
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: -1px -1px 0 var(--ultra-pink), 1px -1px 0 var(--ultra-pink),
+    -1px 1px 0 var(--ultra-pink), 1px 1px 0 var(--ultra-pink);
+  width: 310px;
+}
+
+.splashscreen__credits--clean-text {
   color: white;
   text-decoration: none;
+}
+
+.splashscreen__credits--clean-text:hover {
+  color: var(--tyrian-purple);
+}
+
+.splashscreen__credits-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.splashscreen__credits-created {
+  margin-bottom: 10px;
+}
+
+.splashscreen__credits-icons-img:hover {
+  color: var(--ultra-pink);
 }
