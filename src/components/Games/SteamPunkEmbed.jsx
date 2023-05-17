@@ -5,22 +5,22 @@ const SteamPunkEmbed = () => {
   const [gameScore, setGameScore] = useState(null);
 
   useEffect(() => {
-    function handleMessage(event) {
-      if (event.origin !== 'https://steam-punk-project.netlify.app/') {
+    function handleSteampunk(event) {
+      if (event.origin !== 'https://steam-punk-project.netlify.app') {
         return;
       }
 
-      const { steamScore } = JSON.parse(event.data);
-      if (steamScore) {
-        setGameScore(steamScore);
+      const { steamPunkScore } = JSON.parse(event.data);
+      if (steamPunkScore) {
+        setGameScore(steamPunkScore);
       }
 
       console.log(localStorage.getItem('nickname'));
-      console.log(steamScore);
+      console.log(steamPunkScore);
 
       const data = {
         name: localStorage.getItem('nickname'),
-        score: steamScore,
+        score: steamPunkScore,
         img: localStorage.getItem('profilePic'),
       };
 
@@ -35,10 +35,10 @@ const SteamPunkEmbed = () => {
         });
     }
 
-    window.addEventListener('message', handleMessage);
+    window.addEventListener('message', handleSteampunk);
 
     return () => {
-      window.removeEventListener('message', handleMessage);
+      window.removeEventListener('message', handleSteampunk);
     };
   }, [gameScore]);
   return (
@@ -46,7 +46,7 @@ const SteamPunkEmbed = () => {
       <iframe
         title="Steam Punk Game"
         className="steam-punk-embed"
-        src="https://steam-punk-project.netlify.app/"
+        src="https://steam-punk-project.netlify.app"
         width={1000}
         height={500}
       ></iframe>
