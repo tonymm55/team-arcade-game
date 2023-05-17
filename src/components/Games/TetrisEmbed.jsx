@@ -5,8 +5,8 @@ const TetrisEmbed = () => {
   const [tetrisScore, setTetrisScore] = useState(null);
 
   useEffect(() => {
-    function handleMessage(event) {
-      if (event.origin !== 'https://react-tetris-project.netlify.app/') {
+    function handleTetris(event) {
+      if (event.origin !== 'https://react-tetris-project.netlify.app') {
         return;
       }
 
@@ -30,10 +30,10 @@ const TetrisEmbed = () => {
         });
     }
 
-    window.addEventListener('message', handleMessage);
+    window.addEventListener('message', handleTetris);
 
     return () => {
-      window.removeEventListener('message', handleMessage);
+      window.removeEventListener('message', handleTetris);
     };
   }, [tetrisScore]);
 
@@ -43,7 +43,7 @@ const TetrisEmbed = () => {
       width={700}
       height={900}
       className="tetris-game-embed"
-      src="https://react-tetris-project.netlify.app/"
+      src="https://react-tetris-project.netlify.app"
     ></iframe>
   );
 };

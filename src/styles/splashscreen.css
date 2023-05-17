@@ -34,6 +34,10 @@
   text-decoration: none;
 }
 
+.splashscreen__credits--clean-text:hover {
+  color: var(--tyrian-purple);
+}
+
 .splashscreen__credits-container {
   display: flex;
   align-items: center;
@@ -43,4 +47,8 @@
 
 .splashscreen__credits-created {
   margin-bottom: 10px;
+}
+
+.splashscreen__credits-icons-img:hover {
+  color: var(--ultra-pink);
 }

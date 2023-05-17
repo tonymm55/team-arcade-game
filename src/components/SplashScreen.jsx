@@ -50,14 +50,24 @@ const SplashScreen = ({ onChildClick }) => {
               target={'_blank'}
               rel="noreferrer"
             >
-              <GithubIcon color={'white'} width={'30px'} height={'30px'} />
+              <GithubIcon
+                className={'splashscreen__credits-icons-img'}
+                color={'white'}
+                width={'30px'}
+                height={'30px'}
+              />
             </a>
             <a
               target={'_blank'}
               href="https://twitter.com/TonyMCodes"
               rel="noreferrer"
             >
-              <TwitterIcon color={'white'} width={'30px'} height={'30px'} />
+              <TwitterIcon
+                className={'splashscreen__credits-icons-img'}
+                color={'white'}
+                width={'30px'}
+                height={'30px'}
+              />
             </a>
           </div>
         </div>
@@ -77,14 +87,24 @@ const SplashScreen = ({ onChildClick }) => {
               target={'_blank'}
               rel="noreferrer"
             >
-              <GithubIcon color={'white'} width={'30px'} height={'30px'} />
+              <GithubIcon
+                className={'splashscreen__credits-icons-img'}
+                color={'white'}
+                width={'30px'}
+                height={'30px'}
+              />
             </a>
             <a
               target={'_blank'}
               href="https://twitter.com/Matty92G"
               rel="noreferrer"
             >
-              <TwitterIcon color={'white'} width={'30px'} height={'30px'} />
+              <TwitterIcon
+                className={'splashscreen__credits-icons-img'}
+                color={'white'}
+                width={'30px'}
+                height={'30px'}
+              />
             </a>
           </div>
         </div>
@@ -104,14 +124,24 @@ const SplashScreen = ({ onChildClick }) => {
               target={'_blank'}
               rel="noreferrer"
             >
-              <GithubIcon color={'white'} width={'30px'} height={'30px'} />
+              <GithubIcon
+                className={'splashscreen__credits-icons-img'}
+                color={'white'}
+                width={'30px'}
+                height={'30px'}
+              />
             </a>
             <a
               target={'_blank'}
               href="https://twitter.com/tsv_stacks"
               rel="noreferrer"
             >
-              <TwitterIcon color={'white'} width={'30px'} height={'30px'} />
+              <TwitterIcon
+                className={'splashscreen__credits-icons-img'}
+                color={'white'}
+                width={'30px'}
+                height={'30px'}
+              />
             </a>
           </div>
         </div>
