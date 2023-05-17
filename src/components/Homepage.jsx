@@ -1,9 +1,7 @@
 import { register } from 'swiper/element/bundle';
 import '../styles/Homepage.css';
 import Gamepage from './Gamepage';
-// import RunnerEmbed from './Games/RunnerEmbed';
 import RunnerGame from './authentication/Game/RunnerGame';
-// import TetrisEmbed from './Games/TetrisEmbed';
 import TetrisGame from './authentication/Game/TetrisGame';
 import gameData from '../assets/Site/gamedata.json';
 import SignIn from './authentication/SignIn';
@@ -12,6 +10,9 @@ import NickName from './authentication/NickName';
 import RunnerScoreboard from './Scoreboards/RunnerScoreboard';
 import TetrisScoreboard from './Scoreboards/TetrisScoreboard';
 import { useState } from 'react';
+import SteampunkScoreboard from './Scoreboards/SteampunkScoreboard';
+import SteamPunkGame from './authentication/Game/SteamPunkGame';
+import NinjaEmbed from './Games/NinjaEmbed';
 
 register();
 
@@ -55,7 +56,21 @@ const Homepage = () => {
           <swiper-slide>
             <Gamepage props={gameData} />
           </swiper-slide>
-          <swiper-slide>Game 4</swiper-slide>
+          <swiper-slide>
+            <NinjaEmbed />
+          </swiper-slide>
+          <swiper-slide>
+            <Gamepage props={gameData} />
+          </swiper-slide>
+          <swiper-slide>
+            <SteampunkScoreboard />
+          </swiper-slide>
+          <swiper-slide>
+            <SteamPunkGame nickname={nickname} setNickname={setNickname} />
+          </swiper-slide>
+          <swiper-slide>
+            <Gamepage props={gameData} />
+          </swiper-slide>
           <swiper-slide>Game 5</swiper-slide>
         </swiper-container>
         <swiper-container
@@ -71,7 +86,11 @@ const Homepage = () => {
           <swiper-slide>Tetris Scoreboard</swiper-slide>
           <swiper-slide>Tetris GamePage</swiper-slide>
           <swiper-slide>Tetris</swiper-slide>
-          <swiper-slide>Thumb 5</swiper-slide>
+          <swiper-slide>Ninja GamePage</swiper-slide>
+          <swiper-slide>Ninja</swiper-slide>
+          <swiper-slide>SteamPunk Scoreboard</swiper-slide>
+          <swiper-slide>SteamPunk GamePage</swiper-slide>
+          <swiper-slide>SteamPunk</swiper-slide>
           <swiper-slide>Thumb 6</swiper-slide>
         </swiper-container>
       </div>
