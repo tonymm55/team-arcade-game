@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const TetrisEmbed = () => {
-  const [tetrisScore, setTetrisScore] = useState(null);
+  const [gameScore, setGameScore] = useState(null);
 
   useEffect(() => {
     function handleMessage(event) {
@@ -10,16 +10,16 @@ const TetrisEmbed = () => {
         return;
       }
 
-      const { tetrisGameScore } = JSON.parse(event.data);
-      if (tetrisGameScore) {
-        setTetrisScore(tetrisGameScore);
+      const { tetrisScore } = JSON.parse(event.data);
+      if (tetrisScore) {
+        setGameScore(tetrisScore);
       }
       console.log(localStorage.getItem('nickname'));
-      console.log(tetrisGameScore);
+      console.log(tetrisScore);
 
       const data = {
         name: localStorage.getItem('nickname'),
-        score: tetrisGameScore,
+        score: tetrisScore,
         img: localStorage.getItem('profilePic'),
       };
       axios
@@ -35,7 +35,7 @@ const TetrisEmbed = () => {
     return () => {
       window.removeEventListener('message', handleMessage);
     };
-  }, [tetrisScore]);
+  }, [gameScore]);
 
   return (
     <iframe
