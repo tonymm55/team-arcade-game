@@ -7,7 +7,6 @@ const RunnerEmbed = () => {
   useEffect(() => {
     function handleMessage(event) {
       if (event.origin !== 'https://arcade-game-runner.netlify.app') {
-        // if (event.origin !== 'https://tsv-stacks.github.io/runner-game-two/') {
         return;
       }
 
@@ -15,13 +14,16 @@ const RunnerEmbed = () => {
       if (runnerScore) {
         setGameScore(runnerScore);
       }
+
       console.log(localStorage.getItem('nickname'));
       console.log(runnerScore);
+
       const data = {
         name: localStorage.getItem('nickname'),
         score: runnerScore,
         img: localStorage.getItem('profilePic'),
       };
+
       axios
         .post('https://arcade-backend.onrender.com/scoreboard/run/add', data)
         .then((response) => console.log(response))
@@ -36,16 +38,16 @@ const RunnerEmbed = () => {
       window.removeEventListener('message', handleMessage);
     };
   }, [gameScore]);
-
   return (
-    <iframe
-      title="Runner Game"
-      src="https://arcade-game-runner.netlify.app/"
-      // src="https://tsv-stacks.github.io/runner-game-two/"
-      width={800}
-      height={720}
-      className="runner-game-embed"
-    ></iframe>
+    <>
+      <iframe
+        title="Runner Game"
+        src="https://arcade-game-runner.netlify.app/"
+        width={800}
+        height={720}
+        className="runner-game-embed"
+      ></iframe>
+    </>
   );
 };
 

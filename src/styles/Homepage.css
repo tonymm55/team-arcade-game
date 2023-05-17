@@ -1,5 +1,5 @@
 .homepage * {
-  border: 1px solid red;
+  border: 1px #be0072 solid;
 }
 
 .homepage {
@@ -31,4 +31,16 @@ swiper-slide {
 
 .homepage__title-center {
   text-align: center;
+}
+
+.top-ten-scores-image {
+  max-width: 50px;
+}
+
+.scoreboard-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 1px;
+  grid-row-gap: 0px;
 }
