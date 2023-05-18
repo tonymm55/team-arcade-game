@@ -52,3 +52,29 @@
 .splashscreen__credits-icons-img:hover {
   color: var(--ultra-pink);
 }
+
+.splashscreen__insert-coin {
+  width: 300px;
+  height: 200px;
+  animation: pulse 2s infinite;
+}
+
+.splashscreen__game-icon {
+  width: 400px;
+  height: 400px;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
