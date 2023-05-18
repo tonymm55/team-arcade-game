@@ -26,6 +26,7 @@ const GameScoreboard = ({ Game }) => {
   useEffect(() => {
     fetchData();
   }, []);
+
   const descendingGameStates = gameStates?.sort((a, b) => b.score - a.score);
   const topTenGameStates = descendingGameStates?.slice(0, 10);
   return (
