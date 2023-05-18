@@ -12,7 +12,7 @@
     "description": "Blocks fall down and you must make a horizontal line to score points, the more points you score the faster blocks fall.",
     "builtWith": ["React"],
     "backgroundImg": "",
-    "thumbImg": "",
+    "thumbImg": "./src/assets/games/tetris-thumb-crop.png",
     "scoreboard": "tetris"
   },
   {
@@ -21,14 +21,14 @@
     "builtWith": ["HTML", "CSS", "Vanilla Javascript"],
     "backgroundImg": "",
     "thumbImg": "",
-    "scoreboard": ""
+    "scoreboard": "samurai"
   },
   {
     "title": "Steam Punk",
     "description": "Info about game here",
     "builtWith": ["HTML", "CSS", "Vanilla Javascript"],
     "backgroundImg": "",
-    "thumbImg": "",
+    "thumbImg": "./src/assets/games/steam-thumb.png",
     "scoreboard": "steampunk"
   }
 ]

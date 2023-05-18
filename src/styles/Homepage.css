@@ -44,3 +44,39 @@ swiper-slide {
   grid-column-gap: 1px;
   grid-row-gap: 0px;
 }
+
+.homepage__swiper-thumb--pointer {
+  cursor: pointer;
+}
+
+.homepage__swiper-thumb--tetris {
+  background: rgb(249, 214, 225);
+  background: linear-gradient(
+    177deg,
+    rgba(249, 214, 225, 0.9) 24%,
+    rgba(208, 129, 184, 1) 90%
+  );
+  border: 3px solid #16e8ec;
+}
+
+.homepage__swiper-thumb--steampunk {
+  background: rgb(251, 233, 139);
+  background: linear-gradient(
+    177deg,
+    rgba(251, 233, 139, 1) 24%,
+    rgba(220, 210, 68, 1) 90%
+  );
+  border: 3px solid #cfaa01;
+}
+
+.homepage__swiper-thumb-img {
+  height: 100%;
+}
+
+.homepage__swiper-slide--tetris {
+  border: 3px solid #16e8ec;
+}
+
+.homepage__swiper-slide--steampunk {
+  border: 3px solid #cfaa01;
+}

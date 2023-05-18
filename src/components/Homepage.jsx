@@ -38,7 +38,10 @@ const Homepage = () => {
         >
           {gameData.map((game) => {
             return (
-              <swiper-slide key={game.title}>
+              <swiper-slide
+                class={`homepage__swiper-slide--${game.scoreboard}`}
+                key={game.title}
+              >
                 <Gamepage props={game} key={game.title} />
               </swiper-slide>
             );
@@ -54,10 +57,21 @@ const Homepage = () => {
           watch-slides-progress="true"
           space-between={10}
         >
-          <swiper-slide>Runner GamePage</swiper-slide>
-          <swiper-slide>Tetris GamePage</swiper-slide>
-          <swiper-slide>Ninja GamePage</swiper-slide>
-          <swiper-slide>SteamPunk GamePage</swiper-slide>
+          {gameData.map((game) => {
+            return (
+              <swiper-slide
+                class={`homepage__swiper-thumb--pointer homepage__swiper-thumb--${game.scoreboard}`}
+                key={game.scoreboard}
+              >
+                <img
+                  className={
+                    'homepage__swiper-thumb--pointer  homepage__swiper-thumb-img'
+                  }
+                  src={game.thumbImg}
+                />
+              </swiper-slide>
+            );
+          })}
         </swiper-container>
       </div>
     </main>
