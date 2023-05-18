@@ -4,7 +4,7 @@
     "description": "Jump over the incoming slime enemies by using the arrow keys on your keyboard. You have 3 lives and you lose a life every time you collide with an enemy. The game ends if you lose all three lives.",
     "builtWith": ["HTML", "CSS", "Vanilla Javascript"],
     "backgroundImg": "",
-    "thumbImg": "",
+    "thumbImg": "./src/assets/games/runner-thumb.png",
     "scoreboard": "runner"
   },
   {
@@ -20,7 +20,7 @@
     "description": "A 2D Two Player Fighting Game with local co-op support. Defeat your opponent by reducing their health to zero. Each successful attack reduces the opponent's health by 25 points. The game ends when either player's health reaches zero. If the time runs out, the player with the most health remaining is declared the winner.",
     "builtWith": ["HTML", "CSS", "Vanilla Javascript"],
     "backgroundImg": "",
-    "thumbImg": "",
+    "thumbImg": "./src/assets/games/samurai-thumb.png",
     "scoreboard": "samurai"
   },
   {

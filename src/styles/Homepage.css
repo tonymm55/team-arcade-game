@@ -59,6 +59,20 @@ swiper-slide {
   border: 3px solid #16e8ec;
 }
 
+.homepage__swiper-thumb--runner {
+  border: 3px solid #fd1c03;
+  /* background: rgb(238, 194, 156);
+  background: linear-gradient(
+    180deg,
+    rgba(238, 194, 156, 1) 24%,
+    rgba(246, 147, 45, 1) 90%
+  ); */
+}
+
+.homepage__swiper-thumb--samurai {
+  border: 3px solid #000370;
+}
+
 .homepage__swiper-thumb--steampunk {
   background: rgb(251, 233, 139);
   background: linear-gradient(
@@ -79,4 +93,12 @@ swiper-slide {
 
 .homepage__swiper-slide--steampunk {
   border: 3px solid #cfaa01;
+}
+
+.homepage__swiper-slide--runner {
+  border: 3px solid #fd1c03;
+}
+
+.homepage__swiper-slide--samurai {
+  border: 3px solid #000370;
 }

@@ -16,7 +16,6 @@ const Homepage = () => {
   // make reusable component and pass in props to make the indivdual slides for games
   // put game data (title description) in .json pull in and pass into gamepage as props
   // when game is selected, hide swiper carousel and load in game component
-  // console.log(gameData);
   const [nickname, setNickname] = useState(localStorage.getItem('nickname'));
   return (
     <main className="homepage">
