@@ -2,6 +2,7 @@ import { ReactComponent as Html } from '../assets/icons/html-icon.svg';
 import { ReactComponent as CSSIcon } from '../assets/icons/css-icon.svg';
 import { ReactComponent as VJSIcon } from '../assets/icons/vanillaJS-icon.svg';
 import { ReactComponent as ReactIcon } from '../assets/icons/react-icon.svg';
+import '../styles/Gamepage.css';
 
 const Gamepage = ({ props }) => {
   // remove line below when mapping through in parent
