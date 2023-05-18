@@ -1,5 +1,5 @@
 import { register } from 'swiper/element/bundle';
-import '../styles/Homepage.css';
+import { useState } from 'react';
 import Gamepage from './Gamepage';
 import RunnerGame from './authentication/Game/RunnerGame';
 import TetrisGame from './authentication/Game/TetrisGame';
@@ -9,10 +9,12 @@ import SignOut from './authentication/SignOut';
 import NickName from './authentication/NickName';
 import RunnerScoreboard from './Scoreboards/RunnerScoreboard';
 import TetrisScoreboard from './Scoreboards/TetrisScoreboard';
-import { useState } from 'react';
 import SteampunkScoreboard from './Scoreboards/SteampunkScoreboard';
 import SteamPunkGame from './authentication/Game/SteamPunkGame';
 import NinjaEmbed from './Games/NinjaEmbed';
+
+import '../styles/Homepage.css';
+import '../styles/user.css';
 
 register();
 
@@ -27,9 +29,11 @@ const Homepage = () => {
       <h2 className="homepage__title-center">
         Dynamic Homepage Component title
       </h2>
-      {nickname && <NickName setNickname={setNickname} />}
-      <SignIn />
-      <SignOut />
+      <div className="user-bar">
+        {nickname && <NickName setNickname={setNickname} />}
+        <SignIn />
+        <SignOut />
+      </div>
       <div className="homepage__swiper">
         <swiper-container
           class="homepage__swiper-container"

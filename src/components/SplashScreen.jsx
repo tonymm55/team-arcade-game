@@ -26,7 +26,7 @@ const SplashScreen = ({ onChildClick }) => {
       <SignIn />
       <p>Enter / begin / insert coin image (flickering)</p>
       <button
-        style={{ width: '200px' }}
+        style={{ width: '200px', height: '50px' }}
         type="button"
         onClick={handleInputChange}
       >
