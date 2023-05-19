@@ -22,7 +22,7 @@ const Gamepage = ({ props }) => {
       <button type="button" className="gamepage__start-btn">
         Start Game
       </button>
-      <Scoreboard props={fakescore} />
+      <Scoreboard props={fakescore} gameData={gameInfo.scoreboard} />
     </div>
   );
 };
