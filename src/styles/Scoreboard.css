@@ -1,0 +1,19 @@
+.scoreboard {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.scoreboard__score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scoreboard__img {
+  height: 36px;
+  border-radius: 18px;
+}
+
+.scoreboard__userdate {
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: -2px;
+}

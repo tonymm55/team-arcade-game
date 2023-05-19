@@ -3,7 +3,6 @@ import { useState } from 'react';
 import SignIn from './authentication/SignIn';
 import SignOut from './authentication/SignOut';
 import NickName from './authentication/NickName';
-import RunnerScoreboard from './Scoreboards/RunnerScoreboard';
 import gameData from '../assets/Site/gamedata.json';
 import Gamepage from './Gamepage';
 
@@ -45,9 +44,6 @@ const Homepage = () => {
               </swiper-slide>
             );
           })}
-          <swiper-slide>
-            <RunnerScoreboard />
-          </swiper-slide>
         </swiper-container>
         <swiper-container
           class="homepage__thumbs"
