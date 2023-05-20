@@ -5,7 +5,7 @@
     "builtWith": ["HTML", "CSS", "Vanilla Javascript"],
     "backgroundImg": "",
     "thumbImg": "./src/assets/games/runner-thumb.png",
-    "scoreboard": "runner"
+    "scoreboard": "run"
   },
   {
     "title": "Tetris",
