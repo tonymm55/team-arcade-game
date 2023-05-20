@@ -13,3 +13,31 @@
   width: 100px;
   height: 100px;
 }
+
+.ninja-game-embed {
+  margin: 0 auto;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 5px solid #c0c0c0;
+}
+
+.runner-game-embed {
+  border: 5px solid white;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: block;
+  margin: 0 auto;
+}
+
+.tetris-game-embed {
+  margin: 0 auto;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 5px solid #16e8ec;
+}
+
+.steam-punk-embed {
+  margin: 0 auto;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 5px solid #cfaa01;
+}
