@@ -57,25 +57,25 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
   console.log(localStorage.getItem('nickname'));
 
   return (
-    <div className="gamepage">
-      <h2>{gameInfo.title}</h2>
-      {/* <p>Highscores</p> */}
-      <p>{gameInfo.description}</p>
+    <div className="game-info">
+      <div className="gamepage-container">
+          <div className="gamepage">
+            <h2>{gameInfo.title}</h2>
+            <p className = "game-info">{gameInfo.description}</p>
+            <img src ={StartButtonImage} alt="Start Game" className="gamepage__start-btn" />
+          </div>
+    
+          <div className="leaderboard">
+            <button id={`game-btn-${gameInfo.scoreboard}`}  onClick={handleButtonClick} />
+             {gameStates.length === 0 ? (
+               <p>Fetching highscores...</p>
+             ) : (
+               <Scoreboard props={gameStates} gameData={gameInfo.scoreboard} />
+             )}
+          </div>
+      </div>
 
-  
-     
-      <img src ={StartButtonImage} alt="Start Game" className="gamepage__start-btn" 
-     id={`game-btn-${gameInfo.scoreboard}`}  onClick={handleButtonClick} />
- 
-  
-
-      {gameStates.length === 0 ? (
-        <p>Fetching highscores...</p>
-      ) : (
-        <Scoreboard props={gameStates} gameData={gameInfo.scoreboard} />
-      )}
-
-      <p>Built with:</p>
+      <p className='built-with'>Built with:</p>
       <div className="icon-container">
         <Html height={50} width={50} />
         <CSSIcon height={50} width={50} />
@@ -83,15 +83,13 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
         <ReactIcon height={50} width={50} />
       </div>
 
-
-
       {!localStorage.getItem('nickname') ? (
         <>
           {/* <NickName setNickname={setNickname} /> */}
           <p>Sign in to set your user name and submit your highscores!</p>
         </>
       ) : (
-        <p>Are you ready {localStorage.getItem('nickname')}?</p>
+        <p className='are-you-ready'>Are you ready {localStorage.getItem('nickname')}?</p>
       )}
 
     </div>

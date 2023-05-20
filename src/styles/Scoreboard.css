@@ -1,19 +1,49 @@
 .scoreboard {
-  font-family: 'Press Start 2P', cursive;
+  color: white;
 }
 
 .scoreboard__score {
   display: flex;
-  justify-content: center;
   align-items: center;
+  color: white;
+}
+
+.scoreboard__position {
+  margin-right: 10px;
 }
 
 .scoreboard__img {
-  height: 36px;
-  border-radius: 18px;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
+.scoreboard__userscore {
+  column-width: 100px;
+}
+
+.scoreboard__username,
+
 .scoreboard__userdate {
+  margin-right: 10px;
   font-family: 'Press Start 2P', cursive;
   letter-spacing: -2px;
+  column-width: 200px;
 }
+
+.scoreboard__userscore,
+.scoreboard__userdate {
+  margin-left: auto;
+  min-width: 30px;
+  text-align: right;
+}
+
+.scoreboard__entry {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  font-size: 16px;
+}
+
