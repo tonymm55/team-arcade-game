@@ -1,0 +1,13 @@
+/* * {
+    background-color: green
+} */
+
+html {
+  background-color: #F21575;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/public/splash-screen.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
