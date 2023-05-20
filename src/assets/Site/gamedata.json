@@ -25,10 +25,10 @@
   },
   {
     "title": "Steam Punk",
-    "description": "Info about game here",
     "builtWith": ["HTML", "CSS", "Vanilla Javascript"],
     "backgroundImg": "",
     "thumbImg": "./src/assets/games/steam-thumb.png",
+    "description": "A 2D single player shooting game where the sentinel seahorse fires projectiles at different enemy types. Enemies consist of Drones, Hive Whales and Night Angler. Points are accumulated based on the number of enemies defeated within the game time of 30 seconds. Ammunition 'power ups' are available for making contact with allies. The winner is the player with the most points after 30s",
     "scoreboard": "steampunk"
   }
 ]

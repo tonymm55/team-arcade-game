@@ -3,6 +3,9 @@ import { ReactComponent as GithubIcon } from '../assets/icons/github-icon.svg';
 import { ReactComponent as TwitterIcon } from '../assets/icons/twitter-icon.svg';
 import Footer from './Footer';
 import SignIn from './authentication/SignIn';
+import insertCoinImage from '../assets/icons/insert-coin-neon.png';
+import arcadeClubImage from '../assets/icons/arcade-games-neon.png';
+
 
 const SplashScreen = ({ onChildClick }) => {
   const handleInputChange = () => {
@@ -20,18 +23,27 @@ const SplashScreen = ({ onChildClick }) => {
         backgroundPosition: 'center',
       }}
     >
-      <h1>Splash Screen</h1>
-      <h2>Logo</h2>
-      <h2>Project Name</h2>
+      {/* <h1>Splash Screen</h1> */}
+      <img 
+        src={arcadeClubImage}
+        alt="arcade-game-icon"
+        className="splashscreen__game-icon"
+      />
+      {/* <h2>Project Name</h2> */}
       <SignIn />
-      <p>Enter / begin / insert coin image (flickering)</p>
-      <button
-        style={{ width: '200px', height: '50px' }}
-        type="button"
+      <img 
+        src={insertCoinImage}
+        alt="insert coin"
+        className="splashscreen__insert-coin"
         onClick={handleInputChange}
+      />
+      {/* <button
+        style={{ width: '200px' }}
+
+        type="button"
       >
         Temp Button
-      </button>
+      </button> */}
       <div className="splashscreen__credits">
         <p className="splashscreen__credits-created">CREATED BY:</p>
 
