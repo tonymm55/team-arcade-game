@@ -1,0 +1,19 @@
+.login-with-google-btn {
+  letter-spacing: 1px;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: -1px -1px 0 var(--tyrian-purple), 1px -1px 0 var(--tyrian-purple),
+    -1px 1px 0 var(--tyrian-purple), 1px 1px 0 var(--tyrian-purple);
+  background-color: var(--ultra-pink);
+  padding: 10px 15px;
+}
+
+.login-with-google-btn:hover {
+  background-color: var(--polynesian-blue);
+  cursor: pointer;
+}
+
+.user-bar {
+  display: flex;
+  justify-content: space-around;
+}

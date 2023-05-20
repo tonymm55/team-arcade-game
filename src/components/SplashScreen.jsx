@@ -39,6 +39,7 @@ const SplashScreen = ({ onChildClick }) => {
       />
       {/* <button
         style={{ width: '200px' }}
+
         type="button"
       >
         Temp Button
