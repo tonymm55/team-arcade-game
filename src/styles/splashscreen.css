@@ -61,14 +61,20 @@
 }
 
 .splashscreen__game-icon {
-  width: 400px;
-  height: 400px;
+  width: 250px;
+  height: 250px;
+}
+
+.welcome-message {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
 }
 
 .welcome-message__text {
   font-family: 'Press Start 2P', cursive;
-  text-shadow: -1px -1px 0 var(--ultra-pink), 1px -1px 0 var(--ultra-pink),
-    -1px 1px 0 var(--ultra-pink), 1px 1px 0 var(--ultra-pink);
+  text-shadow: -2px -2px 0 var(--ultra-pink), 2px -2px 0 var(--ultra-pink),
+    -2px 2px 0 var(--ultra-pink), 2px 2px 0 var(--ultra-pink);
   font-size: 20px;
 }
 
@@ -77,6 +83,7 @@
   height: 50px;
   border-radius: 5px;
   border: 2px solid var(--ultra-pink);
+  margin: 0 15px;
 }
 
 @keyframes pulse {

@@ -1,10 +1,5 @@
 .body {
-  background-color: #f21575;
-}
-
-.homepage * {
-  border: 1px #be0072 solid;
-  /* background-color: #F21575; */
+  background-color: greenyellow;
 }
 
 .homepage__header {
@@ -15,10 +10,6 @@
   width: 50px;
 }
 
-.homepage {
-  width: 100vw;
-  height: 100vh;
-}
 .homepage__swiper {
   max-width: 80%;
   height: 70vh;
@@ -26,8 +17,9 @@
 }
 
 .homepage__swiper-container {
-  width: 70rem;
-  height: 42rem;
+  /* width: 80%;
+  height: 42rem; */
+  height: 100%;
   background-color: #16e8ec;
 }
 
@@ -120,13 +112,6 @@ swiper-slide {
 
 .homepage__swiper-slide--samurai {
   background-color: #f21575;
-}
-
-.user-bar {
-  background-color: #f21575;
-  margin-right: 213px;
-  margin-left: 213px;
-  margin-bottom: 10px;
 }
 
 @keyframes shake {
