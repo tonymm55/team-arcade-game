@@ -4,15 +4,15 @@
     "description": "Jump over the incoming slime enemies by using the arrow keys on your keyboard. You have 3 lives and you lose a life every time you collide with an enemy. The game ends if you lose all three lives.",
     "builtWith": ["HTML", "CSS", "Vanilla Javascript"],
     "backgroundImg": "",
-    "thumbImg": "",
-    "scoreboard": "runner"
+    "thumbImg": "./src/assets/games/runner-thumb.png",
+    "scoreboard": "run"
   },
   {
     "title": "Tetris",
     "description": "Blocks fall down and you must make a horizontal line to score points, the more points you score the faster blocks fall.",
     "builtWith": ["React"],
     "backgroundImg": "",
-    "thumbImg": "",
+    "thumbImg": "./src/assets/games/tetris-thumb-crop.png",
     "scoreboard": "tetris"
   },
   {
@@ -20,15 +20,15 @@
     "description": "A 2D Two Player Fighting Game with local co-op support. Defeat your opponent by reducing their health to zero. Each successful attack reduces the opponent's health by 25 points. The game ends when either player's health reaches zero. If the time runs out, the player with the most health remaining is declared the winner.",
     "builtWith": ["HTML", "CSS", "Vanilla Javascript"],
     "backgroundImg": "",
-    "thumbImg": "",
-    "scoreboard": ""
+    "thumbImg": "./src/assets/games/samurai-thumb.png",
+    "scoreboard": "samurai"
   },
   {
     "title": "Steam Punk",
-    "description": "A 2D single player shooting game where the sentinel seahorse fires projectiles at different enemy types. Enemies consist of Drones, Hive Whales and Night Angler. Points are accumulated based on the number of enemies defeated within the game time of 30 seconds. Ammunition 'power ups' are available for making contact with allies. The winner is the player with the most points after 30s",
     "builtWith": ["HTML", "CSS", "Vanilla Javascript"],
     "backgroundImg": "",
-    "thumbImg": "",
+    "thumbImg": "./src/assets/games/steam-thumb.png",
+    "description": "A 2D single player shooting game where the sentinel seahorse fires projectiles at different enemy types. Enemies consist of Drones, Hive Whales and Night Angler. Points are accumulated based on the number of enemies defeated within the game time of 30 seconds. Ammunition 'power ups' are available for making contact with allies. The winner is the player with the most points after 30s",
     "scoreboard": "steampunk"
   }
 ]

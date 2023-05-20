@@ -8,7 +8,7 @@ const NickName = ({ setNickname }) => {
     setNickname(scoreName);
   };
   return (
-    <>
+    <div className="nickname">
       <input
         type="text"
         id="name-input"
@@ -19,7 +19,7 @@ const NickName = ({ setNickname }) => {
       <button type="submit" onClick={handleSubmit}>
         Set Nickname
       </button>
-    </>
+    </div>
   );
 };
 
