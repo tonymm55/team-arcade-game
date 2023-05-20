@@ -10,9 +10,15 @@ import Scoreboard from './Scoreboards/Scoreboard';
 import StartButtonImage from '../assets/icons/press-start-icon-removebg-preview.png'
 // import fakescore from './Scoreboards/scoredata.json';
 
-const Gamepage = ({ props }) => {
+const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
   const [gameStates, setGameStates] = useState([]);
   const gameInfo = props;
+
+  const handleButtonClick = (event) => {
+    const { id } = event.target;
+    handleGameSelected(true);
+    handleButtonId(id);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -48,19 +54,27 @@ const Gamepage = ({ props }) => {
     fetchData();
   }, [gameInfo.scoreboard, gameInfo.title]);
 
+  console.log(localStorage.getItem('nickname'));
+
   return (
     <div className="gamepage">
       <h2>{gameInfo.title}</h2>
       {/* <p>Highscores</p> */}
       <p>{gameInfo.description}</p>
-      {/* <p>image background</p> */}
-      
-      <img src ={StartButtonImage} alt="Start Game" className="gamepage__start-btn" />
+
+  
+     
+      <img src ={StartButtonImage} alt="Start Game" className="gamepage__start-btn" 
+     id={`game-btn-${gameInfo.scoreboard}`}  onClick={handleButtonClick} />
+ 
+  
+
       {gameStates.length === 0 ? (
         <p>Fetching highscores...</p>
       ) : (
         <Scoreboard props={gameStates} gameData={gameInfo.scoreboard} />
       )}
+
       <p>Built with:</p>
       <div className="icon-container">
         <Html height={50} width={50} />
@@ -68,6 +82,18 @@ const Gamepage = ({ props }) => {
         <VJSIcon height={50} width={50} />
         <ReactIcon height={50} width={50} />
       </div>
+
+
+
+      {!localStorage.getItem('nickname') ? (
+        <>
+          {/* <NickName setNickname={setNickname} /> */}
+          <p>Sign in to set your user name and submit your highscores!</p>
+        </>
+      ) : (
+        <p>Are you ready {localStorage.getItem('nickname')}?</p>
+      )}
+
     </div>
     
   );

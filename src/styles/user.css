@@ -4,16 +4,38 @@
   font-family: 'Press Start 2P', cursive;
   text-shadow: -1px -1px 0 var(--tyrian-purple), 1px -1px 0 var(--tyrian-purple),
     -1px 1px 0 var(--tyrian-purple), 1px 1px 0 var(--tyrian-purple);
-  background-color: var(--ultra-pink);
+  background-color: #16e8ec;
   padding: 10px 15px;
+  animation-name: jiggle;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .login-with-google-btn:hover {
-  background-color: var(--polynesian-blue);
+  background-color: var(--ultra-pink);
   cursor: pointer;
 }
 
 .user-bar {
   display: flex;
   justify-content: space-around;
+}
+
+@keyframes jiggle {
+  0% {
+    text-shadow: -3px -0px 0 var(--tyrian-purple),
+      -1px -1px 0 var(--tyrian-purple), 1px -1px 0 var(--tyrian-purple),
+      -1px 1px 0 var(--tyrian-purple), 1px 1px 0 var(--tyrian-purple);
+  }
+  50% {
+    text-shadow: 3px 0px 0 var(--tyrian-purple),
+      -1px -1px 0 var(--tyrian-purple), 1px -1px 0 var(--tyrian-purple),
+      -1px 1px 0 var(--tyrian-purple), 1px 1px 0 var(--tyrian-purple);
+  }
+  100% {
+    text-shadow: -3px -0px 0 var(--tyrian-purple),
+      -1px -1px 0 var(--tyrian-purple), 1px -1px 0 var(--tyrian-purple),
+      -1px 1px 0 var(--tyrian-purple), 1px 1px 0 var(--tyrian-purple);
+  }
 }
