@@ -6,7 +6,11 @@ const SignOut = () => {
       <div className="SignOut">
         <div className="option-container">
           <div className="option-trigger">
-            <img src={localStorage.getItem('profilePic')}></img>
+            <img
+              src={localStorage.getItem('profilePic')}
+              loading="eager"
+              decoding="async"
+            ></img>
           </div>
           <div className="option-menu">
             <div className="option-menu-trigger">
