@@ -32,6 +32,11 @@ const Homepage = () => {
     setButtonId(btnId);
   };
 
+  const reloadFrame = () => {
+    document.getElementById('steam-punk-embed').src =
+      document.getElementById('steam-punk-embed').src;
+  };
+
   const loadGame = (buttonId) => {
     if (buttonId === 'game-btn-run') {
       return <RunnerEmbed />;
@@ -110,14 +115,28 @@ const Homepage = () => {
         <>
           {loadGame(buttonId)}
           <div className="gamepage-controls">
-            <ReturnKey width={30} height={30} color={'white'} />
             <button
               type="button"
               className="return__homepage-btn"
               onClick={handleGameSelected}
             >
-              Choose another game
+              <p>Choose another game</p>
+              <ReturnKey
+                width={30}
+                height={30}
+                color={'white'}
+                margin-right={5}
+              />
             </button>
+            {buttonId === 'game-btn-steampunk' && (
+              <button
+                type="button"
+                className="return__homepage-btn reload-game__homepage"
+                onClick={reloadFrame}
+              >
+                Reload Game
+              </button>
+            )}
           </div>
         </>
       )}
