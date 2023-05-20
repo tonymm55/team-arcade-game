@@ -38,6 +38,7 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
             draggable: false,
             autoClose: 3000,
             limit: 1,
+            position: 'bottom-right',
           });
           setGameStates(data);
           console.log(data);
