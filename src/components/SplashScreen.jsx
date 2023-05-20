@@ -13,16 +13,7 @@ const SplashScreen = ({ onChildClick }) => {
   };
 
   return (
-    <div
-      id="splashscreen"
-      className="splashscreen"
-      style={{
-        backgroundImage: `url(/splash-screen.gif)`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
+    <div id="splashscreen" className="splashscreen">
       {/* <h1>Splash Screen</h1> */}
       <img
         src={arcadeClubImage}

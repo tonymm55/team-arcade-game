@@ -78,3 +78,21 @@
     transform: scale(1);
   }
 }
+
+@media only screen and (min-aspect-ratio: 1/2) {
+  .splashscreen {
+    background-image: url('/splash-screen.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media only screen and (min-aspect-ratio: 1/1) {
+  .splashscreen {
+    background-image: url('/splash-screen-CROP.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
