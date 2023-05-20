@@ -47,6 +47,8 @@ const Gamepage = ({ props }) => {
     fetchData();
   }, [gameInfo.scoreboard, gameInfo.title]);
 
+  console.log(localStorage.getItem('nickname'));
+
   return (
     <div className="gamepage">
       <h2>{gameInfo.title}</h2>
@@ -58,13 +60,20 @@ const Gamepage = ({ props }) => {
       <CSSIcon height={50} width={50} />
       <VJSIcon height={50} width={50} />
       <ReactIcon height={50} width={50} />
-      <button type="button" className="gamepage__start-btn">
-        Start Game
-      </button>
+
       {gameStates.length === 0 ? (
         <p>Fetching highscores...</p>
       ) : (
         <Scoreboard props={gameStates} gameData={gameInfo.scoreboard} />
+      )}
+
+      <button type="button" className="gamepage__start-btn">
+        Temporary Start Game Button
+      </button>
+      {!localStorage.getItem('nickname') ? (
+        <p>Sign in to set your user name and submit your highscores!</p>
+      ) : (
+        <p>Are you ready {localStorage.getItem('nickname')}?</p>
       )}
     </div>
   );
