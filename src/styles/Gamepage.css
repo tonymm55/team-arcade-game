@@ -31,7 +31,9 @@ h2 {
 
 .are-you-ready {
   padding: 10px;
-  font-size: 20px;
+  font-size: 15px;
+  height: 8vh;
+  line-height: 1.5;
 }
 
 .gamepage-container {

@@ -63,6 +63,14 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
             <h2>{gameInfo.title}</h2>
             <p className = "game-info">{gameInfo.description}</p>
             <img src ={StartButtonImage} alt="Start Game" className="gamepage__start-btn" />
+            {!localStorage.getItem('nickname') ? (
+              <>
+                {/* <NickName setNickname={setNickname} /> */}
+                <p>Sign in to set your user name and submit your highscores!</p>
+              </>
+            ) : (
+              <p className='are-you-ready'>Are you ready <br></br> { localStorage.getItem('nickname')}?</p>
+            )}
           </div>
     
           <div className="leaderboard">
@@ -83,14 +91,7 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
         <ReactIcon height={50} width={50} />
       </div>
 
-      {!localStorage.getItem('nickname') ? (
-        <>
-          {/* <NickName setNickname={setNickname} /> */}
-          <p>Sign in to set your user name and submit your highscores!</p>
-        </>
-      ) : (
-        <p className='are-you-ready'>Are you ready {localStorage.getItem('nickname')}?</p>
-      )}
+      
 
     </div>
     
