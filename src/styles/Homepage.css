@@ -97,6 +97,10 @@ swiper-slide {
   height: 100%;
 }
 
+.homepage__swiper-thumb-img:hover {
+  animation: shake 0.4s ease-in-out infinite;
+}
+
 .homepage__swiper-slide--tetris {
   border: 3px solid #16e8ec;
 }
@@ -111,4 +115,19 @@ swiper-slide {
 
 .homepage__swiper-slide--samurai {
   border: 3px solid #000370;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-3px) rotate(-3deg);
+  }
+  75% {
+    transform: translateX(3px) rotate(3deg);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

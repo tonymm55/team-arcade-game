@@ -54,6 +54,7 @@
 }
 
 .splashscreen__insert-coin {
+  cursor: pointer;
   width: 300px;
   height: 200px;
   animation: pulse 2s infinite;
