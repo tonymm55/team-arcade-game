@@ -43,7 +43,7 @@ const Homepage = () => {
 
   return (
     <main className="homepage">
-      <h2 className="homepage__title-center">Choose a Game</h2>
+      <h2 className="homepage__title-center">Select Game</h2>
       <div className="user-bar">
         {nickname && <NickName setNickname={setNickname} />}
         <SignIn />
