@@ -62,7 +62,7 @@ const Gamepage = ({ props }) => {
         Start Game
       </button>
       {gameStates.length === 0 ? (
-        <p>Getting highscores...</p>
+        <p>Fetching highscores...</p>
       ) : (
         <Scoreboard props={gameStates} gameData={gameInfo.scoreboard} />
       )}
