@@ -4,12 +4,12 @@
   font-family: 'Press Start 2P', cursive;
   text-shadow: -1px -1px 0 var(--tyrian-purple), 1px -1px 0 var(--tyrian-purple),
     -1px 1px 0 var(--tyrian-purple), 1px 1px 0 var(--tyrian-purple);
-  background-color: var(--ultra-pink);
+  background-color: #16e8ec;
   padding: 10px 15px;
 }
 
 .login-with-google-btn:hover {
-  background-color: var(--polynesian-blue);
+  background-color: var(--ultra-pink);
   cursor: pointer;
 }
 
