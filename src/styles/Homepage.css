@@ -18,8 +18,8 @@
 }
 
 .homepage__swiper-container {
-  width: 65rem;
-  height: 32rem;
+  width: 71vw;
+  height: 32vh;
   background-color: #16e8ec;
   padding: 1px;
 
@@ -52,24 +52,14 @@ swiper-slide {
 
 .homepage__swiper-container {
   background-color: #F21575;
+  height: 60vh;
 }
 
 .top-ten-scores-image {
   max-width: 50px;
 }
 
-.scoreboard-points {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 2fr;
-  grid-column-gap: 1px;
-  grid-row-gap: 0px;
-}
 
-.scoreboard__title {
-  padding: 8px;
-  font-size: 20px;
-}
 
 .homepage__swiper-thumb--pointer {
   cursor: pointer;

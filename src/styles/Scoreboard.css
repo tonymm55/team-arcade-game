@@ -20,22 +20,26 @@
 }
 
 .scoreboard__userscore {
-  column-width: 100px;
+  column-width: 0px;
+  min-width: 50px;
 }
 
-.scoreboard__username,
+.scoreboard__username{
+  column-width: 150px;
+  width: 250px;
+  text-align: left;
+}
 
 .scoreboard__userdate {
-  margin-right: 10px;
+  margin-right: 5px;
   font-family: 'Press Start 2P', cursive;
   letter-spacing: -2px;
-  column-width: 200px;
+  column-width: 100px;
+  width: 150px;
 }
 
 .scoreboard__userscore,
 .scoreboard__userdate {
-  margin-left: auto;
-  min-width: 30px;
   text-align: right;
 }
 
@@ -47,3 +51,16 @@
   font-size: 16px;
 }
 
+/* .scoreboard-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2fr;
+  grid-column-gap: 1px;
+  grid-row-gap: 0px;
+} */
+
+.scoreboard__title {
+  padding: 9px;
+  font-size: 20px;
+  margin: 0px;
+}
