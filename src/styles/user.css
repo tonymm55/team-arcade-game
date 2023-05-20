@@ -1,9 +1,11 @@
 .user-bar {
   display: flex;
   justify-content: space-around;
-  background-color: #16e8ec;
+  align-items: center;
+  background-color: rgba(165, 40, 130, 0.4);
   width: 100%;
   margin-bottom: 15px;
+  height: auto;
 }
 
 .login-with-google-btn,
@@ -27,8 +29,10 @@
   cursor: pointer;
 }
 
-.option-container {
+.option-container,
+.option-menu {
   display: flex;
+  align-items: center;
 }
 
 .signout__profile-img {
@@ -36,7 +40,24 @@
   height: 50px;
   border-radius: 5px;
   border: 2px solid var(--ultra-pink);
-  margin: 0 15px;
+  margin: 0 10px;
+}
+
+.signout__profile-name {
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: -1px -1px 0 var(--ultra-pink), 1px -1px 0 var(--ultra-pink),
+    -1px 1px 0 var(--ultra-pink), 1px 1px 0 var(--ultra-pink);
+  color: white;
+  margin: 0 10px;
+}
+
+input[type='text'] {
+  padding: 10px 0;
+  font-family: 'Press Start 2P', cursive;
+  text-indent: 10px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  margin-right: 5px;
 }
 
 @keyframes jiggle {

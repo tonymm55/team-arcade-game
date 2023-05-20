@@ -12,7 +12,7 @@ const NickName = ({ setNickname }) => {
       <input
         type="text"
         id="name-input"
-        placeholder="Enter your name"
+        placeholder="Enter your name..."
         onChange={handleInputChange}
         value={scoreName}
       />
