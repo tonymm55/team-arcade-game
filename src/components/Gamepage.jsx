@@ -82,7 +82,10 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
         Temporary Start Game Button
       </button>
       {!localStorage.getItem('nickname') ? (
-        <p>Sign in to set your user name and submit your highscores!</p>
+        <>
+          {/* <NickName setNickname={setNickname} /> */}
+          <p>Sign in to set your user name and submit your highscores!</p>
+        </>
       ) : (
         <p>Are you ready {localStorage.getItem('nickname')}?</p>
       )}

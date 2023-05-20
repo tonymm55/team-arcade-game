@@ -8,6 +8,10 @@ import Gamepage from './Gamepage';
 
 import '../styles/Homepage.css';
 import '../styles/user.css';
+import RunnerEmbed from './Games/RunnerEmbed';
+import NinjaEmbed from './Games/NinjaEmbed';
+import TetrisEmbed from './Games/TetrisEmbed';
+import SteamPunkEmbed from './Games/SteamPunkEmbed';
 
 register();
 
@@ -23,6 +27,18 @@ const Homepage = () => {
 
   const handleButtonId = (btnId) => {
     setButtonId(btnId);
+  };
+
+  const loadGame = (buttonId) => {
+    if (buttonId === 'game-btn-run') {
+      return <RunnerEmbed />;
+    } else if (buttonId === 'game-btn-samurai') {
+      return <NinjaEmbed />;
+    } else if (buttonId === 'game-btn-tetris') {
+      return <TetrisEmbed />;
+    } else if (buttonId === 'game-btn-steampunk') {
+      return <SteamPunkEmbed />;
+    }
   };
 
   return (
@@ -85,8 +101,8 @@ const Homepage = () => {
       )}
       {gameSelected && (
         <>
+          {loadGame(buttonId)}
           <button onClick={handleGameSelected}>Return to Game Select</button>
-          <p>{buttonId}</p>
         </>
       )}
     </main>
