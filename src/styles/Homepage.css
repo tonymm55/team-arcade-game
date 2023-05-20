@@ -39,11 +39,8 @@ swiper-slide {
   font-family: 'Press Start 2P', cursive;
   text-align: center;
   background-color: #f21575;
-  font-size: 40px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 213px;
-  margin-left: 213px;
+  font-size: 32px;
+  margin: 10px auto;
   padding: 10px;
 }
 

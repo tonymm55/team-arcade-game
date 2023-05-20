@@ -6,6 +6,8 @@ import NickName from './authentication/NickName';
 import gameData from '../assets/Site/gamedata.json';
 import Gamepage from './Gamepage';
 
+import { ReactComponent as ReturnKey } from '../assets/icons/return-key.svg';
+
 import '../styles/Homepage.css';
 import '../styles/user.css';
 import RunnerEmbed from './Games/RunnerEmbed';
@@ -107,7 +109,16 @@ const Homepage = () => {
       {gameSelected && (
         <>
           {loadGame(buttonId)}
-          <button onClick={handleGameSelected}>Return to Game Select</button>
+          <div className="gamepage-controls">
+            <ReturnKey width={30} height={30} color={'white'} />
+            <button
+              type="button"
+              className="return__homepage-btn"
+              onClick={handleGameSelected}
+            >
+              Choose another game
+            </button>
+          </div>
         </>
       )}
     </main>
