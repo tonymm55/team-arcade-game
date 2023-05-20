@@ -1,5 +1,10 @@
+.body {
+  background-color: #F21575;
+}
+
 .homepage * {
   border: 1px #be0072 solid;
+  background-color: #F21575;
 }
 
 .homepage {
@@ -8,13 +13,15 @@
 }
 .homepage__swiper {
   max-width: 80%;
-  height: 80vh;
+  height: 70vh;
   margin: 0 auto;
 }
 
 .homepage__swiper-container {
-  width: 100%;
-  height: 100%;
+  width: 70rem;
+  height: 42rem;
+  background-color: #16e8ec;
+
 }
 
 swiper-slide {
@@ -26,11 +33,24 @@ swiper-slide {
 }
 
 .homepage__thumbs .swiper-slide-thumb-active {
-  opacity: 1 !important;
+  opacity: 0.5 !important;
+  background: #16e8ec;
 }
 
 .homepage__title-center {
+  font-family: 'Press Start 2P', cursive;
   text-align: center;
+  background-color: #F21575;
+  font-size: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 160px;
+  margin-left: 160px;
+  padding: 10px;
+}
+
+.homepage__swiper-container {
+  background-color: #F21575;
 }
 
 .top-ten-scores-image {
@@ -40,7 +60,7 @@ swiper-slide {
 .scoreboard-points {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
+  grid-template-rows: 2fr;
   grid-column-gap: 1px;
   grid-row-gap: 0px;
 }
@@ -50,65 +70,48 @@ swiper-slide {
 }
 
 .homepage__swiper-thumb--tetris {
-  background: rgb(249, 214, 225);
-  background: linear-gradient(
-    177deg,
-    rgba(249, 214, 225, 0.9) 24%,
-    rgba(208, 129, 184, 1) 90%
-  );
-  border: 3px solid #16e8ec;
+  background: #16e8ec;
 }
 
 .homepage__swiper-thumb--tetris:hover {
   transition: all 1s ease-in-out;
-  background: rgb(249, 214, 225);
-  background: linear-gradient(
-    177deg,
-    rgba(208, 129, 184, 1) 24%,
-    rgba(249, 214, 225, 0.9) 90%
-  );
+  background: #16e8ec;
 }
 
-.homepage__swiper-thumb--runner {
-  border: 3px solid #fd1c03;
-  /* background: rgb(238, 194, 156);
-  background: linear-gradient(
-    180deg,
-    rgba(238, 194, 156, 1) 24%,
-    rgba(246, 147, 45, 1) 90%
-  ); */
+.homepage__swiper-thumb--run {
+  background-color: #16e8ec;
 }
 
 .homepage__swiper-thumb--samurai {
-  border: 3px solid #000370;
+  background-color: #16e8ec;
 }
 
 .homepage__swiper-thumb--steampunk {
-  background: rgb(251, 233, 139);
-  background: linear-gradient(
-    177deg,
-    rgba(251, 233, 139, 1) 24%,
-    rgba(220, 210, 68, 1) 90%
-  );
-  border: 3px solid #cfaa01;
+  background-color: #16e8ec;
 }
 
 .homepage__swiper-thumb-img {
   height: 100%;
+  background-color: #16e8ec
 }
 
 .homepage__swiper-slide--tetris {
-  border: 3px solid #16e8ec;
+  background-color: #F21575;
 }
 
 .homepage__swiper-slide--steampunk {
-  border: 3px solid #cfaa01;
+  background-color: #F21575;
 }
 
 .homepage__swiper-slide--runner {
-  border: 3px solid #fd1c03;
+  background-color: #F21575;
 }
 
 .homepage__swiper-slide--samurai {
-  border: 3px solid #000370;
+  background-color: #F21575;
+}
+
+.user-bar {
+  background-color: #F21575;
+  margin-right: 156px;
 }

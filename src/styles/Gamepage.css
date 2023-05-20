@@ -1,3 +1,15 @@
+.gamepage {
+  /* background-image: url('../assets/icons/desktop-wallpaper-cyborg-cyberpunk-in-pink-plain-background-1920-x-1080-in-2020-robot-simple-background-cyberpunk-wire.jpg');  */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #F21575;
+  font-family: 'Press Start 2P', cursive;
+}
+
+
 .gamepage__start-btn {
   font-family: 'Press Start 2P', cursive;
+  width: 100px;
+  height: 100px;
 }
