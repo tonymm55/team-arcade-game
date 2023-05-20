@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 
 const Footer = () => {
   const [playAudio, setPlayAudio] = useState(false);
-  const [music, setMusic] = useState(new Audio(Ambient));
+  const [music, setMusic] = useState(new Audio(Ambient)); //useMemo may be better
 
   const handleOnClick = () => {
     setPlayAudio(true);
