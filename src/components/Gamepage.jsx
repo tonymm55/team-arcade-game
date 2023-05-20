@@ -9,9 +9,14 @@ import '../styles/Gamepage.css';
 import Scoreboard from './Scoreboards/Scoreboard';
 // import fakescore from './Scoreboards/scoredata.json';
 
-const Gamepage = ({ props }) => {
+const Gamepage = ({ props, handleGameSelected }) => {
   const [gameStates, setGameStates] = useState([]);
   const gameInfo = props;
+
+  const handleButtonClick = (event) => {
+    console.log(event.target);
+    handleGameSelected(true);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -67,7 +72,12 @@ const Gamepage = ({ props }) => {
         <Scoreboard props={gameStates} gameData={gameInfo.scoreboard} />
       )}
 
-      <button type="button" className="gamepage__start-btn">
+      <button
+        onClick={handleButtonClick}
+        type="button"
+        className="gamepage__start-btn"
+        id={`game-btn-${gameInfo.scoreboard}`}
+      >
         Temporary Start Game Button
       </button>
       {!localStorage.getItem('nickname') ? (

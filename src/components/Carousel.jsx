@@ -1,7 +1,7 @@
 import Gamepage from './Gamepage';
 import gameData from '../assets/Site/gamedata.json';
 
-const Carousel = () => {
+const Carousel = ({ handleGameSelected }) => {
   return (
     <div className="homepage__swiper">
       <swiper-container
@@ -17,7 +17,11 @@ const Carousel = () => {
               class={`homepage__swiper-slide--${game.scoreboard}`}
               key={game.title}
             >
-              <Gamepage props={game} key={game.title} />
+              <Gamepage
+                handleGameSelected={handleGameSelected}
+                props={game}
+                key={game.title}
+              />
             </swiper-slide>
           );
         })}
