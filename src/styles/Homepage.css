@@ -33,7 +33,7 @@ swiper-slide {
 }
 
 .homepage__thumbs .swiper-slide-thumb-active {
-  opacity: 0.5 !important;
+  opacity: 0.7 !important;
   background: #16e8ec;
 }
 
@@ -44,8 +44,8 @@ swiper-slide {
   font-size: 40px;
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-right: 160px;
-  margin-left: 160px;
+  margin-right: 213px;
+  margin-left: 213px;
   padding: 10px;
 }
 
@@ -113,5 +113,7 @@ swiper-slide {
 
 .user-bar {
   background-color: #F21575;
-  margin-right: 156px;
+  margin-right: 213px;
+  margin-left: 213px;
+  margin-bottom: 10px;
 }
