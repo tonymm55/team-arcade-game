@@ -3,13 +3,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: #F21575;
+  background-color: #f21575;
   font-family: 'Press Start 2P', cursive;
 }
 
-
 .gamepage__start-btn {
   font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
   width: 100px;
   height: 100px;
 }

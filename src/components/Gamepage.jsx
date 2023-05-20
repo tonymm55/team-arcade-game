@@ -7,7 +7,7 @@ import { ReactComponent as VJSIcon } from '../assets/icons/vanillaJS-icon.svg';
 import { ReactComponent as ReactIcon } from '../assets/icons/react-icon.svg';
 import '../styles/Gamepage.css';
 import Scoreboard from './Scoreboards/Scoreboard';
-import StartButtonImage from '../assets/icons/press-start-icon-removebg-preview.png'
+import StartButtonImage from '../assets/icons/press-start-icon-removebg-preview.png';
 // import fakescore from './Scoreboards/scoredata.json';
 
 const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
@@ -62,13 +62,6 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
       {/* <p>Highscores</p> */}
       <p>{gameInfo.description}</p>
 
-  
-     
-      <img src ={StartButtonImage} alt="Start Game" className="gamepage__start-btn" 
-     id={`game-btn-${gameInfo.scoreboard}`}  onClick={handleButtonClick} />
- 
-  
-
       {gameStates.length === 0 ? (
         <p>Fetching highscores...</p>
       ) : (
@@ -83,8 +76,6 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
         <ReactIcon height={50} width={50} />
       </div>
 
-
-
       {!localStorage.getItem('nickname') ? (
         <>
           {/* <NickName setNickname={setNickname} /> */}
@@ -94,8 +85,14 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
         <p>Are you ready {localStorage.getItem('nickname')}?</p>
       )}
 
+      <img
+        src={StartButtonImage}
+        alt="Start Game"
+        className="gamepage__start-btn"
+        id={`game-btn-${gameInfo.scoreboard}`}
+        onClick={handleButtonClick}
+      />
     </div>
-    
   );
 };
 

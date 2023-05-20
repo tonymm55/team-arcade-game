@@ -12,6 +12,7 @@ import RunnerEmbed from './Games/RunnerEmbed';
 import NinjaEmbed from './Games/NinjaEmbed';
 import TetrisEmbed from './Games/TetrisEmbed';
 import SteamPunkEmbed from './Games/SteamPunkEmbed';
+import arcadeLogo from '../assets/icons/arcade-games-neon.png';
 
 register();
 
@@ -43,7 +44,11 @@ const Homepage = () => {
 
   return (
     <main className="homepage">
-      <h2 className="homepage__title-center">Select Game</h2>
+      <header className="homepage__header">
+        <img src={arcadeLogo} className="homepage__header-img"></img>
+        <h1>Arcade Game Room</h1>
+        <h2 className="homepage__title-center">Select Game</h2>
+      </header>
       <div className="user-bar">
         {nickname && <NickName setNickname={setNickname} />}
         <SignIn />

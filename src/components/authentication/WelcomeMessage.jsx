@@ -3,10 +3,15 @@ const WelcomeMessage = () => {
     return (
       <div className="WelcomeMessage">
         <div className="profile-pic">
-          <img src={localStorage.getItem('profilePic')}></img>
+          <img
+            className="welcome-message__profile-img"
+            src={localStorage.getItem('profilePic')}
+          ></img>
         </div>
         <div className="welcome-message">
-          <h2>Welcome {localStorage.getItem('nickname')}!</h2>
+          <h2 className="welcome-message__text">
+            Welcome {localStorage.getItem('nickname')}!
+          </h2>
         </div>
       </div>
     );

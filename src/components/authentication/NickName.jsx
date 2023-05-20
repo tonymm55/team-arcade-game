@@ -16,7 +16,7 @@ const NickName = ({ setNickname }) => {
         onChange={handleInputChange}
         value={scoreName}
       />
-      <button type="submit" onClick={handleSubmit}>
+      <button className="user-btn" type="submit" onClick={handleSubmit}>
         Set Nickname
       </button>
     </div>
