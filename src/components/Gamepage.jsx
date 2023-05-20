@@ -9,13 +9,14 @@ import '../styles/Gamepage.css';
 import Scoreboard from './Scoreboards/Scoreboard';
 // import fakescore from './Scoreboards/scoredata.json';
 
-const Gamepage = ({ props, handleGameSelected }) => {
+const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
   const [gameStates, setGameStates] = useState([]);
   const gameInfo = props;
 
   const handleButtonClick = (event) => {
-    console.log(event.target);
+    const { id } = event.target;
     handleGameSelected(true);
+    handleButtonId(id);
   };
 
   useEffect(() => {

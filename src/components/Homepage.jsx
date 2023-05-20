@@ -14,9 +14,15 @@ register();
 const Homepage = () => {
   const [nickname, setNickname] = useState(localStorage.getItem('nickname'));
   const [gameSelected, setGameSelected] = useState(false);
+  const [buttonId, setButtonId] = useState(null);
 
   const handleGameSelected = () => {
     setGameSelected((prev) => !prev);
+    setButtonId(null);
+  };
+
+  const handleButtonId = (btnId) => {
+    setButtonId(btnId);
   };
 
   return (
@@ -44,6 +50,7 @@ const Homepage = () => {
                 >
                   <Gamepage
                     handleGameSelected={handleGameSelected}
+                    handleButtonId={handleButtonId}
                     props={game}
                     key={game.title}
                   />
@@ -77,7 +84,10 @@ const Homepage = () => {
         </div>
       )}
       {gameSelected && (
-        <button onClick={handleGameSelected}>Return to Game Select</button>
+        <>
+          <button onClick={handleGameSelected}>Return to Game Select</button>
+          <p>{buttonId}</p>
+        </>
       )}
     </main>
   );
