@@ -12,15 +12,11 @@ import '../styles/user.css';
 register();
 
 const Homepage = () => {
-  // make reusable component and pass in props to make the indivdual slides for games
-  // put game data (title description) in .json pull in and pass into gamepage as props
   // when game is selected, hide swiper carousel and load in game component
   const [nickname, setNickname] = useState(localStorage.getItem('nickname'));
   return (
     <main className="homepage">
-      <h2 className="homepage__title-center">
-        Dynamic Homepage Component title
-      </h2>
+      <h2 className="homepage__title-center">Choose a Game</h2>
       <div className="user-bar">
         {nickname && <NickName setNickname={setNickname} />}
         <SignIn />
