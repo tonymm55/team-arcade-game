@@ -60,14 +60,14 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
   return (
     <div className="gamepage">
       <h2>{gameInfo.title}</h2>
-      {/* <p>Highscores</p> */}
       <p>{gameInfo.description}</p>
 
-      {gameStates.length === 0 ? (
-        <p>Fetching highscores...</p>
-      ) : (
-        <Scoreboard props={gameStates} gameData={gameInfo.scoreboard} />
-      )}
+      {gameInfo.scoreboard !== 'samurai' &&
+        (gameStates.length === 0 ? (
+          <p>Fetching highscores...</p>
+        ) : (
+          <Scoreboard props={gameStates} gameData={gameInfo.scoreboard} />
+        ))}
 
       <p>Built with:</p>
       <div className="icon-container">
