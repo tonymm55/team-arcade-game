@@ -57,6 +57,34 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
 
   console.log(localStorage.getItem('nickname'));
 
+  const iconObject = {
+    html: Html,
+    css: CSSIcon,
+    js: VJSIcon,
+    react: ReactIcon,
+  };
+
+  const renderIcons = () => {
+    let iconComponent = [];
+    console.log(`<${iconObject.html}/>`);
+    console.log(gameInfo.builtWith);
+
+    if (gameInfo.builtWith.includes('HTML')) {
+      iconComponent.push(iconObject.html);
+    }
+    if (gameInfo.builtWith.includes('CSS')) {
+      iconComponent.push(iconObject.css);
+    }
+    if (gameInfo.builtWith.includes('Vanilla Javascript')) {
+      iconComponent.push(iconObject.js);
+    }
+    if (gameInfo.builtWith.includes('React')) {
+      iconComponent.push(iconObject.react);
+    }
+
+    console.log(iconComponent);
+  };
+
   return (
     <div className="gamepage">
       <h2>{gameInfo.title}</h2>
@@ -70,6 +98,7 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
         ))}
 
       <p>Built with:</p>
+      <p>{renderIcons()}</p>
       <div className="icon-container">
         <Html height={50} width={50} />
         <CSSIcon height={50} width={50} />
