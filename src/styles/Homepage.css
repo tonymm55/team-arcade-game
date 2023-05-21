@@ -12,15 +12,16 @@
   height: 100vh;
 }
 .homepage__swiper {
-  max-width: 80%;
-  height: 70vh;
+  width: 71vw;
+  height: 72vh;
   margin: 0 auto;
 }
 
 .homepage__swiper-container {
-  width: 70rem;
-  height: 42rem;
+  width: 71vw;
+  height: 32vh;
   background-color: #16e8ec;
+  padding: 1px;
 
 }
 
@@ -51,18 +52,11 @@ swiper-slide {
 
 .homepage__swiper-container {
   background-color: #F21575;
+  height: 60vh;
 }
 
 .top-ten-scores-image {
   max-width: 50px;
-}
-
-.scoreboard-points {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 2fr;
-  grid-column-gap: 1px;
-  grid-row-gap: 0px;
 }
 
 .homepage__swiper-thumb--pointer {
@@ -73,13 +67,14 @@ swiper-slide {
   background: #16e8ec;
 }
 
-.homepage__swiper-thumb--tetris:hover {
+/* .homepage__swiper-thumb--tetris:hover {
   transition: all 1s ease-in-out;
   background: #16e8ec;
-}
+} */
 
 .homepage__swiper-thumb--run {
   background-color: #16e8ec;
+  cursor: pointer;
 }
 
 .homepage__swiper-thumb--samurai {
@@ -95,9 +90,9 @@ swiper-slide {
   background-color: #16e8ec
 }
 
-.homepage__swiper-thumb-img:hover {
+/* .homepage__swiper-thumb-img:hover {
   animation: shake 0.4s ease-in-out infinite;
-}
+} */
 
 .homepage__swiper-slide--tetris {
   background-color: #F21575;
@@ -105,6 +100,7 @@ swiper-slide {
 
 .homepage__swiper-slide--steampunk {
   background-color: #F21575;
+  margin: 2px;
 }
 
 .homepage__swiper-slide--runner {
