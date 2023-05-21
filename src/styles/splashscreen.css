@@ -80,7 +80,7 @@
   }
 }
 
-@media only screen and (min-aspect-ratio: 1/2) {
+@media only screen and (min-aspect-ratio: 1/3) {
   .splashscreen {
     background-image: url('/splash-screen.gif');
     background-repeat: no-repeat;
@@ -89,7 +89,7 @@
   }
 }
 
-@media only screen and (min-aspect-ratio: 1/1) {
+@media only screen and (min-aspect-ratio: 9/5) {
   .splashscreen {
     background-image: url('/splash-screen-CROP.gif');
     background-repeat: no-repeat;

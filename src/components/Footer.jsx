@@ -18,9 +18,9 @@ const Footer = () => {
 
   useEffect(() => {
     if (playAudio) {
-      music.play();
+      music.play;
     } else {
-      music.pause();
+      music.pause;
     }
   }, [playAudio, music]);
 
