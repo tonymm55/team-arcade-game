@@ -66,23 +66,19 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
 
   const renderIcons = () => {
     let iconComponent = [];
-    console.log(`<${iconObject.html}/>`);
-    console.log(gameInfo.builtWith);
-
     if (gameInfo.builtWith.includes('HTML')) {
-      iconComponent.push(iconObject.html);
+      iconComponent.push(<iconObject.html height={50} width={50} />);
     }
     if (gameInfo.builtWith.includes('CSS')) {
-      iconComponent.push(iconObject.css);
+      iconComponent.push(<iconObject.css height={50} width={50} />);
     }
     if (gameInfo.builtWith.includes('Vanilla Javascript')) {
-      iconComponent.push(iconObject.js);
+      iconComponent.push(<iconObject.js height={50} width={50} />);
     }
     if (gameInfo.builtWith.includes('React')) {
-      iconComponent.push(iconObject.react);
+      iconComponent.push(<iconObject.react height={50} width={50} />);
     }
-
-    console.log(iconComponent);
+    return iconComponent;
   };
 
   return (
@@ -98,17 +94,11 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
         ))}
 
       <p>Built with:</p>
-      <p>{renderIcons()}</p>
-      <div className="icon-container">
-        <Html height={50} width={50} />
-        <CSSIcon height={50} width={50} />
-        <VJSIcon height={50} width={50} />
-        <ReactIcon height={50} width={50} />
-      </div>
+
+      <div>{renderIcons()}</div>
 
       {!localStorage.getItem('nickname') ? (
         <>
-          {/* <NickName setNickname={setNickname} /> */}
           <p>Sign in to set your user name and submit your highscores!</p>
         </>
       ) : (
