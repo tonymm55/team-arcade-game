@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const SteamPunkEmbed = () => {
   const [gameScore, setGameScore] = useState(null);
@@ -29,9 +30,21 @@ const SteamPunkEmbed = () => {
           'https://arcade-backend.onrender.com/scoreboard/steampunk/add',
           data
         )
-        .then((response) => console.log(response))
+        .then((response) => {
+          toast.promise(Promise.resolve(response), {
+            pending: 'Loading...',
+            success: 'Score submitted!',
+            closeOnClick: true,
+            draggable: false,
+            autoClose: 3000,
+          });
+        })
         .catch((err) => {
-          console.log(err);
+          toast.error(`${err.message}`, {
+            closeOnClick: true,
+            draggable: false,
+            autoClose: 3000,
+          });
         });
     }
 
@@ -46,6 +59,7 @@ const SteamPunkEmbed = () => {
       <iframe
         title="Steam Punk Game"
         className="steam-punk-embed"
+        id="steam-punk-embed"
         src="https://steam-punk-project.netlify.app"
         width={1000}
         height={500}

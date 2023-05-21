@@ -3,13 +3,67 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: #F21575;
+  background-color: #f21575;
   font-family: 'Press Start 2P', cursive;
 }
 
-
 .gamepage__start-btn {
   font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
   width: 100px;
   height: 100px;
+}
+
+.ninja-game-embed {
+  margin: 0 auto;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 5px solid #c0c0c0;
+}
+
+.runner-game-embed {
+  border: 5px solid white;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: block;
+  margin: 0 auto;
+}
+
+.tetris-game-embed {
+  margin: 0 auto;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 5px solid #16e8ec;
+}
+
+.steam-punk-embed {
+  margin: 0 auto;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 5px solid #cfaa01;
+}
+
+.return__homepage-btn {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-family: 'Press Start 2P', cursive;
+  /* padding: 10px 15px; */
+  text-shadow: -2px -2px 0 var(--tyrian-purple), 2px -2px 0 var(--tyrian-purple),
+    -2px 2px 0 var(--tyrian-purple), 2px 2px 0 var(--tyrian-purple);
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.gamepage-controls {
+  margin: 0 auto;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 80%;
+}
+
+.reload-game__homepage {
+  padding: 10px 15px;
 }

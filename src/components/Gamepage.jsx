@@ -7,7 +7,7 @@ import { ReactComponent as VJSIcon } from '../assets/icons/vanillaJS-icon.svg';
 import { ReactComponent as ReactIcon } from '../assets/icons/react-icon.svg';
 import '../styles/Gamepage.css';
 import Scoreboard from './Scoreboards/Scoreboard';
-import StartButtonImage from '../assets/icons/press-start-icon-removebg-preview.png'
+import StartButtonImage from '../assets/icons/press-start-icon-removebg-preview.png';
 // import fakescore from './Scoreboards/scoredata.json';
 
 const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
@@ -38,6 +38,7 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
             draggable: false,
             autoClose: 3000,
             limit: 1,
+            position: 'bottom-right',
           });
           setGameStates(data);
           console.log(data);
@@ -56,34 +57,54 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
 
   console.log(localStorage.getItem('nickname'));
 
+  const iconObject = {
+    html: Html,
+    css: CSSIcon,
+    js: VJSIcon,
+    react: ReactIcon,
+  };
+
+  const renderIcons = () => {
+    let iconComponent = [];
+    console.log(`<${iconObject.html}/>`);
+    console.log(gameInfo.builtWith);
+
+    if (gameInfo.builtWith.includes('HTML')) {
+      iconComponent.push(iconObject.html);
+    }
+    if (gameInfo.builtWith.includes('CSS')) {
+      iconComponent.push(iconObject.css);
+    }
+    if (gameInfo.builtWith.includes('Vanilla Javascript')) {
+      iconComponent.push(iconObject.js);
+    }
+    if (gameInfo.builtWith.includes('React')) {
+      iconComponent.push(iconObject.react);
+    }
+
+    console.log(iconComponent);
+  };
+
   return (
     <div className="gamepage">
       <h2>{gameInfo.title}</h2>
-      {/* <p>Highscores</p> */}
       <p>{gameInfo.description}</p>
 
-  
-     
-      <img src ={StartButtonImage} alt="Start Game" className="gamepage__start-btn" 
-     id={`game-btn-${gameInfo.scoreboard}`}  onClick={handleButtonClick} />
- 
-  
-
-      {gameStates.length === 0 ? (
-        <p>Fetching highscores...</p>
-      ) : (
-        <Scoreboard props={gameStates} gameData={gameInfo.scoreboard} />
-      )}
+      {gameInfo.scoreboard !== 'samurai' &&
+        (gameStates.length === 0 ? (
+          <p>Fetching highscores...</p>
+        ) : (
+          <Scoreboard props={gameStates} gameData={gameInfo.scoreboard} />
+        ))}
 
       <p>Built with:</p>
+      <p>{renderIcons()}</p>
       <div className="icon-container">
         <Html height={50} width={50} />
         <CSSIcon height={50} width={50} />
         <VJSIcon height={50} width={50} />
         <ReactIcon height={50} width={50} />
       </div>
-
-
 
       {!localStorage.getItem('nickname') ? (
         <>
@@ -94,8 +115,14 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
         <p>Are you ready {localStorage.getItem('nickname')}?</p>
       )}
 
+      <img
+        src={StartButtonImage}
+        alt="Start Game"
+        className="gamepage__start-btn"
+        id={`game-btn-${gameInfo.scoreboard}`}
+        onClick={handleButtonClick}
+      />
     </div>
-    
   );
 };
 
