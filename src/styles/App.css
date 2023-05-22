@@ -8,9 +8,12 @@ body {
   padding: 0;
 }
 
-/* I couldn't get the mouse icon to change reliably but left it here in case we have time to go back and figure it out */
-
-/* body {
-  cursor: url("/cursor.png"), pointer !important;
-  cursor: url("/pointer.png"), auto !important;
-} */
+html {
+  background-color: rgb(242, 21, 117, 0.4);
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/splash-screen-CROP.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
