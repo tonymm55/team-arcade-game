@@ -21,6 +21,7 @@ const NickName = ({ setNickname }) => {
       });
     }
   };
+
   return (
     <div className="nickname">
       <input

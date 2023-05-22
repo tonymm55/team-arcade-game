@@ -83,35 +83,51 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
 
   return (
     <div className="gamepage">
-      <h2>{gameInfo.title}</h2>
-      <p>{gameInfo.description}</p>
+      <div className="gamepage__scores-details">
+        <div className="gamepage__game-details">
+          <div>
+            <h2 className="gamepage__game-detail-title">{gameInfo.title}</h2>
+            <p className="gamepage__game-detail-description">
+              {gameInfo.description}
+            </p>
+          </div>
 
-      {gameInfo.scoreboard !== 'samurai' &&
-        (gameStates.length === 0 ? (
-          <p>Fetching highscores...</p>
-        ) : (
-          <Scoreboard props={gameStates} gameData={gameInfo.scoreboard} />
-        ))}
 
-      <p>Built with:</p>
+          <div>
+            <img
+              src={StartButtonImage}
+              alt="Start Game"
+              className="gamepage__start-btn"
+              id={`game-btn-${gameInfo.scoreboard}`}
+              onClick={handleButtonClick}
+            />
+            {!localStorage.getItem('nickname') ? (
+              <>
+                <p className="gamepage__start-text">
+                  Sign in to set your user name and submit your highscores!
+                </p>
+              </>
+            ) : (
+              <p className="gamepage__start-text">
+                Are you ready {localStorage.getItem('nickname')}?
+              </p>
+            )}
+          </div>
+        </div>
+        <div className="gamepage__game-scores">
+          {gameInfo.scoreboard !== 'samurai' &&
+            (gameStates.length === 0 ? (
+              <p>Fetching highscores...</p>
+            ) : (
+              <Scoreboard props={gameStates} gameData={gameInfo.scoreboard} />
+            ))}
+        </div>
+      </div>
 
-      <div className="icon-container">{renderIcons()}</div>
-
-      {!localStorage.getItem('nickname') ? (
-        <>
-          <p>Sign in to set your user name and submit your highscores!</p>
-        </>
-      ) : (
-        <p>Are you ready {localStorage.getItem('nickname')}?</p>
-      )}
-
-      <img
-        src={StartButtonImage}
-        alt="Start Game"
-        className="gamepage__start-btn"
-        id={`game-btn-${gameInfo.scoreboard}`}
-        onClick={handleButtonClick}
-      />
+      <div className="gamepage__built-with">
+        <p>Built with:</p>
+        <div>{renderIcons()}</div>
+      </div>
     </div>
   );
 };

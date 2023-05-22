@@ -10,6 +10,7 @@
 
 .scoreboard__position {
   margin-right: 10px;
+  font-size: 12px;
 }
 
 .scoreboard__img {
@@ -17,14 +18,15 @@
   height: 40px;
   object-fit: cover;
   border-radius: 50%;
+  border: var(--ultra-pink) 1px solid;
 }
 
 .scoreboard__userscore {
-  column-width: 0px;
+  /* column-width: 0px; */
   min-width: 50px;
 }
 
-.scoreboard__username{
+.scoreboard__username {
   column-width: 150px;
   width: 250px;
   text-align: left;
@@ -34,8 +36,9 @@
   margin-right: 5px;
   font-family: 'Press Start 2P', cursive;
   letter-spacing: -2px;
-  column-width: 100px;
-  width: 150px;
+  /* column-width: 100px; */
+  width: 130px;
+  font-size: 15px;
 }
 
 .scoreboard__userscore,
@@ -46,21 +49,17 @@
 .scoreboard__entry {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   width: 100%;
   font-size: 16px;
+  border-bottom: 3px solid var(--tyrian-purple);
 }
-
-/* .scoreboard-points {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 2fr;
-  grid-column-gap: 1px;
-  grid-row-gap: 0px;
-} */
 
 .scoreboard__title {
   padding: 9px;
   font-size: 20px;
   margin: 0px;
+  font-style: italic;
+  text-shadow: -1px -1px 0 var(--ultra-pink), 1px -1px 0 var(--ultra-pink),
+    -1px 1px 0 var(--ultra-pink), 1px 1px 0 var(--ultra-pink);
 }

@@ -10,7 +10,7 @@
   },
   {
     "title": "Tetris",
-    "description": "Tetrominos fall down fromn the top of the stage. The aim of the game is to make a complete horizontal row of tetrominos to score points, the more points you score the faster blocks fall. Tetrominos can be moved left, right and rotated.",
+    "description": "Tetrominos fall down from the top of the stage. The aim of the game is to make a complete horizontal row of tetrominos to score points, the more points you score the faster blocks fall. Tetrominos can be moved left, right and rotated.",
     "builtWith": ["React"],
     "backgroundImg": "",
     "thumbImg": "./src/assets/games/tetris-thumb-crop.png",

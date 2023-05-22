@@ -35,7 +35,20 @@ const Footer = () => {
 
   return (
     <footer className="footer" id="footer">
-      <p>footer empty or contains game name</p>
+      <button onClick={handleOnClick}>
+        <img
+          src={soundOn}
+          alt="sound on icon"
+          className="footer__image-aspect"
+        />
+      </button>
+      <button onClick={handleOffClick}>
+        <img
+          src={soundOff}
+          alt="sound off icon"
+          className="footer__image-aspect"
+        />
+      </button>
       <div className="mute">
         <button onClick={handleOnClick}>
           <div className="mute-image">
