@@ -86,8 +86,10 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
       <div className="gamepage__scores-details">
         <div className="gamepage__game-details">
           <div>
-            <h2>{gameInfo.title}</h2>
-            <p>{gameInfo.description}</p>
+            <h2 className="gamepage__game-detail-title">{gameInfo.title}</h2>
+            <p className="gamepage__game-detail-description">
+              {gameInfo.description}
+            </p>
           </div>
 
           <div>
@@ -101,10 +103,14 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
 
             {!localStorage.getItem('nickname') ? (
               <>
-                <p>Sign in to set your user name and submit your highscores!</p>
+                <p className="gamepage__start-text">
+                  Sign in to set your user name and submit your highscores!
+                </p>
               </>
             ) : (
-              <p>Are you ready {localStorage.getItem('nickname')}?</p>
+              <p className="gamepage__start-text">
+                Are you ready {localStorage.getItem('nickname')}?
+              </p>
             )}
           </div>
         </div>

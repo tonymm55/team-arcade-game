@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* background-color: rgba(165, 40, 130, 0.4); */
   width: 100%;
   margin-bottom: 15px;
   height: auto;
@@ -17,10 +16,7 @@
     -1px 1px 0 var(--tyrian-purple), 1px 1px 0 var(--tyrian-purple);
   background-color: #16e8ec;
   padding: 10px 15px;
-  animation-name: jiggle;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  animation: jiggle 4s infinite linear;
 }
 
 .login-with-google-btn:hover,
