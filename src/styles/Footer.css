@@ -9,9 +9,9 @@
 }
 
 /* delete for production */
-.footer * {
-  /* border: 1px #be0072 solid; */
-}
+/* .footer * {
+  border: 1px #be0072 solid;
+} */
 
 .footer__image-aspect {
   width: 40px;
