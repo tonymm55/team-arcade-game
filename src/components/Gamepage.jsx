@@ -7,7 +7,7 @@ import { ReactComponent as VJSIcon } from '../assets/icons/vanillaJS-icon.svg';
 import { ReactComponent as ReactIcon } from '../assets/icons/react-icon.svg';
 import '../styles/Gamepage.css';
 import Scoreboard from './Scoreboards/Scoreboard';
-import StartButtonImage from '../assets/icons/press-start-icon-removebg-preview.png'
+import StartButtonImage from '../assets/icons/press-start-icon-removebg-preview.png';
 // import fakescore from './Scoreboards/scoredata.json';
 
 const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
@@ -38,6 +38,7 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
             draggable: false,
             autoClose: 3000,
             limit: 1,
+            position: 'bottom-right',
           });
           setGameStates(data);
           console.log(data);
@@ -56,45 +57,64 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
 
   console.log(localStorage.getItem('nickname'));
 
+  const iconObject = {
+    html: Html,
+    css: CSSIcon,
+    js: VJSIcon,
+    react: ReactIcon,
+  };
+
+  const renderIcons = () => {
+    let iconComponent = [];
+    if (gameInfo.builtWith.includes('HTML')) {
+      iconComponent.push(<iconObject.html height={50} width={50} />);
+    }
+    if (gameInfo.builtWith.includes('CSS')) {
+      iconComponent.push(<iconObject.css height={50} width={50} />);
+    }
+    if (gameInfo.builtWith.includes('Vanilla Javascript')) {
+      iconComponent.push(<iconObject.js height={50} width={50} />);
+    }
+    if (gameInfo.builtWith.includes('React')) {
+      iconComponent.push(<iconObject.react height={50} width={50} />);
+    }
+    return iconComponent;
+  };
+
   return (
-    <div className="game-info">
-      <div className="gamepage-container">
-          <div className="gamepage">
-            <h2>{gameInfo.title}</h2>
-            <p className = "game-info">{gameInfo.description}</p>
-            <img src ={StartButtonImage} alt="Start Game" className="gamepage__start-btn" />
-            {!localStorage.getItem('nickname') ? (
-              <>
-                {/* <NickName setNickname={setNickname} /> */}
-                <p>Sign in to set your user name and submit your highscores!</p>
-              </>
-            ) : (
-              <p className='are-you-ready'>Are you ready <br></br> { localStorage.getItem('nickname')}?</p>
-            )}
-          </div>
-    
-          <div className="leaderboard">
-            <button id={`game-btn-${gameInfo.scoreboard}`}  onClick={handleButtonClick} />
-             {gameStates.length === 0 ? (
-               <p>Fetching highscores...</p>
-             ) : (
-               <Scoreboard props={gameStates} gameData={gameInfo.scoreboard} />
-             )}
-          </div>
-      </div>
 
-      <p className='built-with'>Built with:</p>
-      <div className="icon-container">
-        <Html height={50} width={50} />
-        <CSSIcon height={50} width={50} />
-        <VJSIcon height={50} width={50} />
-        <ReactIcon height={50} width={50} />
-      </div>
+    <div className="gamepage">
+      <h2>{gameInfo.title}</h2>
+      <p>{gameInfo.description}</p>
 
-      
+      {gameInfo.scoreboard !== 'samurai' &&
+        (gameStates.length === 0 ? (
+          <p>Fetching highscores...</p>
+        ) : (
+          <Scoreboard props={gameStates} gameData={gameInfo.scoreboard} />
+        ))}
 
+      <p>Built with:</p>
+
+      <div>{renderIcons()}</div>
+
+      {!localStorage.getItem('nickname') ? (
+        <>
+          <p>Sign in to set your user name and submit your highscores!</p>
+        </>
+      ) : (
+        <p>Are you ready {localStorage.getItem('nickname')}?</p>
+      )}
+
+
+      <img
+        src={StartButtonImage}
+        alt="Start Game"
+        className="gamepage__start-btn"
+        id={`game-btn-${gameInfo.scoreboard}`}
+        onClick={handleButtonClick}
+      />
     </div>
-    
   );
 };
 

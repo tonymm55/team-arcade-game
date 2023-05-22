@@ -6,12 +6,15 @@ import NickName from './authentication/NickName';
 import gameData from '../assets/Site/gamedata.json';
 import Gamepage from './Gamepage';
 
+import { ReactComponent as ReturnKey } from '../assets/icons/return-key.svg';
+
 import '../styles/Homepage.css';
 import '../styles/user.css';
 import RunnerEmbed from './Games/RunnerEmbed';
 import NinjaEmbed from './Games/NinjaEmbed';
 import TetrisEmbed from './Games/TetrisEmbed';
 import SteamPunkEmbed from './Games/SteamPunkEmbed';
+import arcadeLogo from '../assets/icons/arcade-games-neon.png';
 
 register();
 
@@ -29,6 +32,11 @@ const Homepage = () => {
     setButtonId(btnId);
   };
 
+  const reloadFrame = () => {
+    document.getElementById('steam-punk-embed').src =
+      document.getElementById('steam-punk-embed').src;
+  };
+
   const loadGame = (buttonId) => {
     if (buttonId === 'game-btn-run') {
       return <RunnerEmbed />;
@@ -43,7 +51,11 @@ const Homepage = () => {
 
   return (
     <main className="homepage">
-      <h2 className="homepage__title-center">Select Game</h2>
+      <header className="homepage__header">
+        <img src={arcadeLogo} className="homepage__header-img"></img>
+        <h1>Arcade Game Room</h1>
+        <h2 className="homepage__title-center">Select Game</h2>
+      </header>
       <div className="user-bar">
         {nickname && <NickName setNickname={setNickname} />}
         <SignIn />
@@ -102,7 +114,30 @@ const Homepage = () => {
       {gameSelected && (
         <>
           {loadGame(buttonId)}
-          <button onClick={handleGameSelected}>Return to Game Select</button>
+          <div className="gamepage-controls">
+            <button
+              type="button"
+              className="return__homepage-btn"
+              onClick={handleGameSelected}
+            >
+              <p>Choose another game</p>
+              <ReturnKey
+                width={30}
+                height={30}
+                color={'white'}
+                margin-right={5}
+              />
+            </button>
+            {buttonId === 'game-btn-steampunk' && (
+              <button
+                type="button"
+                className="return__homepage-btn reload-game__homepage"
+                onClick={reloadFrame}
+              >
+                Reload Game
+              </button>
+            )}
+          </div>
         </>
       )}
     </main>

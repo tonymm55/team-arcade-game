@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 *,
-html {
+html,
+body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -13,8 +14,3 @@ html {
   cursor: url("/cursor.png"), pointer !important;
   cursor: url("/pointer.png"), auto !important;
 } */
-
-body {
-  width: 100vw;
-  height: 100vh;
-}

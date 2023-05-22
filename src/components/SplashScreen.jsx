@@ -14,13 +14,12 @@ const SplashScreen = ({ onChildClick }) => {
 
   return (
     <div id="splashscreen" className="splashscreen">
-      {/* <h1>Splash Screen</h1> */}
       <img
         src={arcadeClubImage}
         alt="arcade-game-icon"
         className="splashscreen__game-icon"
       />
-      {/* <h2>Project Name</h2> */}
+
       <SignIn />
       <WelcomeMessage />
       <img
@@ -29,13 +28,7 @@ const SplashScreen = ({ onChildClick }) => {
         className="splashscreen__insert-coin"
         onClick={handleInputChange}
       />
-      {/* <button
-        style={{ width: '200px' }}
 
-        type="button"
-      >
-        Temp Button
-      </button> */}
       <div className="splashscreen__credits">
         <p className="splashscreen__credits-created">CREATED BY:</p>
 

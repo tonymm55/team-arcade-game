@@ -1,4 +1,15 @@
-.login-with-google-btn {
+.user-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(165, 40, 130, 0.4);
+  width: 100%;
+  margin-bottom: 15px;
+  height: auto;
+}
+
+.login-with-google-btn,
+.user-btn {
   letter-spacing: 1px;
   color: white;
   font-family: 'Press Start 2P', cursive;
@@ -12,14 +23,41 @@
   animation-timing-function: linear;
 }
 
-.login-with-google-btn:hover {
+.login-with-google-btn:hover,
+.user-btn:hover {
   background-color: var(--ultra-pink);
   cursor: pointer;
 }
 
-.user-bar {
+.option-container,
+.option-menu {
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+}
+
+.signout__profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  border: 2px solid var(--ultra-pink);
+  margin: 0 10px;
+}
+
+.signout__profile-name {
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: -1px -1px 0 var(--ultra-pink), 1px -1px 0 var(--ultra-pink),
+    -1px 1px 0 var(--ultra-pink), 1px 1px 0 var(--ultra-pink);
+  color: white;
+  margin: 0 10px;
+}
+
+input[type='text'] {
+  padding: 10px 0;
+  font-family: 'Press Start 2P', cursive;
+  text-indent: 10px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  margin-right: 5px;
 }
 
 @keyframes jiggle {
