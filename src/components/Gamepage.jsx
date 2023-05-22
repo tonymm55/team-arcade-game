@@ -9,7 +9,6 @@ import '../styles/Gamepage.css';
 import Scoreboard from './Scoreboard';
 import StartButtonImage from '../assets/icons/press-start-icon-removebg-preview.png';
 import samuraiGif from '../assets/games/samurai-gif.gif';
-// import fakescore from './Scoreboards/scoredata.json';
 
 const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
   const [gameStates, setGameStates] = useState([]);
@@ -42,9 +41,7 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
             position: 'bottom-right',
           });
           setGameStates(data);
-          console.log(data);
-        } catch (error) {
-          console.log(error);
+        } catch (err) {
           toast.error(`Unable to get high scores for ${gameInfo.title}`, {
             closeOnClick: true,
             draggable: false,
@@ -55,8 +52,6 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
     };
     fetchData();
   }, [gameInfo.scoreboard, gameInfo.title]);
-
-  console.log(localStorage.getItem('nickname'));
 
   const iconObject = {
     html: Html,

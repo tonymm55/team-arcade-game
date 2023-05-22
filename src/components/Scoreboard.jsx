@@ -1,10 +1,8 @@
 import '../styles/Scoreboard.css';
 
 const Scoreboard = ({ props, gameData }) => {
-  //   console.log(props);
   let gameScores = props;
   let topTenScores = gameScores.sort((a, b) => b.score - a.score).slice(0, 10);
-  console.log(topTenScores, gameData, props[0]._id);
 
   const convertDate = (dateString) => {
     const date = new Date(dateString);
