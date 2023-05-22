@@ -1,11 +1,25 @@
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const NickName = ({ setNickname }) => {
   const [scoreName, setScoreName] = useState(localStorage.getItem('nickname'));
   const handleInputChange = (event) => setScoreName(event.target.value);
   const handleSubmit = () => {
-    localStorage.setItem('nickname', scoreName);
-    setNickname(scoreName);
+    if (scoreName) {
+      localStorage.setItem('nickname', scoreName);
+      setNickname(scoreName);
+      toast.success(`Nickname updated to ${scoreName}`, {
+        closeOnClick: true,
+        draggable: false,
+        autoClose: 3000,
+      });
+    } else {
+      toast.error('Not a valid nickname', {
+        closeOnClick: true,
+        draggable: false,
+        autoClose: 3000,
+      });
+    }
   };
   return (
     <div className="nickname">
