@@ -4,6 +4,17 @@
 
 .homepage__header {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px;
+  text-shadow: -2px -2px 0 var(--ultra-pink), 2px -2px 0 var(--ultra-pink),
+    -2px 2px 0 var(--ultra-pink), 2px 2px 0 var(--ultra-pink);
+}
+
+.homepage__title-name {
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  margin-left: 3px;
 }
 
 .homepage__header-img {
@@ -20,7 +31,7 @@
 .homepage__swiper-container {
   height: 100%;
   background-color: #16e8ec;
-/*   width: 71vw;
+  /*   width: 71vw;
   height: 32vh;
   background-color: #16e8ec;
   padding: 1px; */
@@ -34,8 +45,13 @@ swiper-slide {
   height: 10vh;
 }
 
-.homepage__thumbs .swiper-slide-thumb-active {
-  opacity: 0.7 !important;
+.homepage__swiper-thumb--pointer {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.swiper-slide-thumb-active {
+  opacity: 1;
   background: #16e8ec;
 }
 
@@ -50,15 +66,11 @@ swiper-slide {
 
 .homepage__swiper-container {
   background-color: #f21575;
-/*   height: 60vh; */
+  /*   height: 60vh; */
 }
 
 .top-ten-scores-image {
   max-width: 50px;
-}
-
-.homepage__swiper-thumb--pointer {
-  cursor: pointer;
 }
 
 .homepage__swiper-thumb--tetris {
@@ -98,7 +110,6 @@ swiper-slide {
 
 .homepage__swiper-slide--steampunk {
   background-color: #f21575;
-/*   margin: 2px; */
 }
 
 .homepage__swiper-slide--runner {
