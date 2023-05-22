@@ -17,6 +17,10 @@
   display: flex;
 }
 
+.samurai-gif {
+  height: 400px;
+}
+
 .gamepage__game-details {
   display: flex;
   flex-direction: column;

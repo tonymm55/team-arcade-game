@@ -8,6 +8,7 @@ import { ReactComponent as ReactIcon } from '../assets/icons/react-icon.svg';
 import '../styles/Gamepage.css';
 import Scoreboard from './Scoreboards/Scoreboard';
 import StartButtonImage from '../assets/icons/press-start-icon-removebg-preview.png';
+import samuraiGif from '../assets/games/samurai-gif.gif';
 // import fakescore from './Scoreboards/scoredata.json';
 
 const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
@@ -103,6 +104,9 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
             ) : (
               <Scoreboard props={gameStates} gameData={gameInfo.scoreboard} />
             ))}
+          {gameInfo.scoreboard === 'samurai' && (
+            <img className="samurai-gif" src={samuraiGif} />
+          )}
         </div>
       </div>
 
