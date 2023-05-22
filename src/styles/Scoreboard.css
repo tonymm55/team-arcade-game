@@ -55,16 +55,10 @@
   border-bottom: 3px solid var(--tyrian-purple);
 }
 
-/* .scoreboard-points {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 2fr;
-  grid-column-gap: 1px;
-  grid-row-gap: 0px;
-} */
-
 .scoreboard__title {
   padding: 9px;
   font-size: 20px;
   margin: 0px;
+  text-shadow: -1px -1px 0 var(--ultra-pink), 1px -1px 0 var(--ultra-pink),
+    -1px 1px 0 var(--ultra-pink), 1px 1px 0 var(--ultra-pink);
 }
