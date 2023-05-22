@@ -21,7 +21,7 @@
 .homepage__swiper {
   width: 71vw;
   height: 72vh;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 
 .homepage__swiper-container {
@@ -35,6 +35,7 @@ swiper-slide {
 
 .homepage__thumbs {
   height: 10vh;
+  margin-top: 10px;
 }
 
 .homepage__swiper-thumb--pointer {
