@@ -1,4 +1,4 @@
-import '../../styles/Scoreboard.css';
+import '../styles/Scoreboard.css';
 
 const Scoreboard = ({ props, gameData }) => {
   //   console.log(props);

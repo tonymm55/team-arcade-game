@@ -6,7 +6,7 @@ import { ReactComponent as CSSIcon } from '../assets/icons/css-icon.svg';
 import { ReactComponent as VJSIcon } from '../assets/icons/vanillaJS-icon.svg';
 import { ReactComponent as ReactIcon } from '../assets/icons/react-icon.svg';
 import '../styles/Gamepage.css';
-import Scoreboard from './Scoreboards/Scoreboard';
+import Scoreboard from './Scoreboard';
 import StartButtonImage from '../assets/icons/press-start-icon-removebg-preview.png';
 import samuraiGif from '../assets/games/samurai-gif.gif';
 // import fakescore from './Scoreboards/scoredata.json';
