@@ -7,6 +7,7 @@ const NickName = ({ setNickname }) => {
     localStorage.setItem('nickname', scoreName);
     setNickname(scoreName);
   };
+
   return (
     <div className="nickname">
       <input
