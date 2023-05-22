@@ -91,27 +91,9 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
               {gameInfo.description}
             </p>
           </div>
-
-
-          <div>
-            <img
-              src={StartButtonImage}
-              alt="Start Game"
-              className="gamepage__start-btn"
-              id={`game-btn-${gameInfo.scoreboard}`}
-              onClick={handleButtonClick}
-            />
-            {!localStorage.getItem('nickname') ? (
-              <>
-                <p className="gamepage__start-text">
-                  Sign in to set your user name and submit your highscores!
-                </p>
-              </>
-            ) : (
-              <p className="gamepage__start-text">
-                Are you ready {localStorage.getItem('nickname')}?
-              </p>
-            )}
+          <div className="gamepage__built-with">
+            <p>Built with:</p>
+            <div>{renderIcons()}</div>
           </div>
         </div>
         <div className="gamepage__game-scores">
@@ -124,9 +106,25 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
         </div>
       </div>
 
-      <div className="gamepage__built-with">
-        <p>Built with:</p>
-        <div>{renderIcons()}</div>
+      <div>
+        <img
+          src={StartButtonImage}
+          alt="Start Game"
+          className="gamepage__start-btn"
+          id={`game-btn-${gameInfo.scoreboard}`}
+          onClick={handleButtonClick}
+        />
+        {!localStorage.getItem('nickname') ? (
+          <>
+            <p className="gamepage__start-text">
+              Sign in to set your user name and submit your highscores!
+            </p>
+          </>
+        ) : (
+          <p className="gamepage__start-text">
+            Are you ready {localStorage.getItem('nickname')}?
+          </p>
+        )}
       </div>
     </div>
   );
