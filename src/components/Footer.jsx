@@ -26,7 +26,6 @@ const Footer = () => {
 
   return (
     <footer className="footer" id="footer">
-      <p>footer empty or contains game name</p>
       <button onClick={handleOnClick}>
         <img
           src={soundOn}
