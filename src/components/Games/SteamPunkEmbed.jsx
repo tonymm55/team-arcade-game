@@ -16,6 +16,15 @@ const SteamPunkEmbed = () => {
         setGameScore(steamPunkScore);
       }
 
+      if (!localStorage.getItem('nickname')) {
+        const userInput = window.prompt(
+          'Please enter a name to submit your score!'
+        );
+        if (userInput) {
+          localStorage.setItem('nickname', userInput);
+        }
+      }
+
       console.log(localStorage.getItem('nickname'));
       console.log(steamPunkScore);
 
