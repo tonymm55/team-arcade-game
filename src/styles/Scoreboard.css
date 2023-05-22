@@ -22,12 +22,10 @@
 }
 
 .scoreboard__userscore {
-  /* column-width: 0px; */
   min-width: 50px;
 }
 
 .scoreboard__username {
-  column-width: 150px;
   width: 250px;
   text-align: left;
 }
@@ -36,7 +34,6 @@
   margin-right: 5px;
   font-family: 'Press Start 2P', cursive;
   letter-spacing: -2px;
-  /* column-width: 100px; */
   width: 130px;
   font-size: 15px;
 }

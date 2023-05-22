@@ -51,16 +51,13 @@ swiper-slide {
 .homepage__title-center {
   font-family: 'Press Start 2P', cursive;
   text-align: center;
-  /* background-color: rgba(242, 21, 117, 0.8); */
   font-size: 32px;
   margin: 10px auto;
   padding: 10px;
 }
 
 .homepage__swiper-container {
-  /* background-color: rgba(242, 21, 117, 0.8); */
   height: auto;
-  /*   height: 60vh; */
 }
 
 .top-ten-scores-image {
@@ -70,11 +67,6 @@ swiper-slide {
 .homepage__swiper-thumb--tetris {
   background: #16e8ec;
 }
-
-/* .homepage__swiper-thumb--tetris:hover {
-  transition: all 1s ease-in-out;
-  background: #16e8ec;
-} */
 
 .homepage__swiper-thumb--run {
   background-color: #16e8ec;
@@ -92,23 +84,4 @@ swiper-slide {
 .homepage__swiper-thumb-img {
   height: 100%;
   background-color: #16e8ec;
-}
-
-/* .homepage__swiper-thumb-img:hover {
-  animation: shake 0.4s ease-in-out infinite;
-} */
-
-@keyframes shake {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-3px) rotate(-3deg);
-  }
-  75% {
-    transform: translateX(3px) rotate(3deg);
-  }
-  100% {
-    transform: translateX(0);
-  }
 }

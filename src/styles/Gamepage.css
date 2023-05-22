@@ -88,7 +88,6 @@
   cursor: pointer;
   color: rgb(255, 255, 255);
   font-family: 'Press Start 2P', cursive;
-  /* padding: 10px 15px; */
   text-shadow: -2px -2px 0 var(--tyrian-purple), 2px -2px 0 var(--tyrian-purple),
     -2px 2px 0 var(--tyrian-purple), 2px 2px 0 var(--tyrian-purple);
   background-color: rgba(255, 255, 255, 0.25);
