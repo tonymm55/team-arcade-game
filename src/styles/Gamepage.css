@@ -9,6 +9,24 @@
   background-position: center center;
   background-color: #f21575;
   font-family: 'Press Start 2P', cursive;
+  display: flex;
+  flex-direction: column;
+}
+
+.gamepage__scores-details {
+  display: flex;
+}
+
+.gamepage__game-details {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.gamepage__game-scores {
+  width: 60%;
 }
 
 .gamepage__start-btn {
@@ -16,6 +34,7 @@
   cursor: pointer;
   width: 100px;
   height: 100px;
+  margin: 0 auto;
 }
 
 .ninja-game-embed {
@@ -72,7 +91,6 @@
   padding: 10px 15px;
 }
 
-
 .built-with {
   font-size: 12px;
   padding: 5px;
@@ -81,25 +99,4 @@
 h2 {
   padding: 8px;
   font-size: 20px;
-}
-
-.are-you-ready {
-  padding: 10px;
-  font-size: 15px;
-  height: 8vh;
-  line-height: 1.5;
-}
-
-.gamepage-container {
-  display: flex;
-}
-
-.gamepage {
-  flex: 1;
-}
-
-.leaderboard {
-  flex: 1;
-  align-items: flex-start;
-  margin-top: -15px;
 }
