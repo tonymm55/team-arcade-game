@@ -63,16 +63,24 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
   const renderIcons = () => {
     let iconComponent = [];
     if (gameInfo.builtWith.includes('HTML')) {
-      iconComponent.push(<iconObject.html height={50} width={50} />);
+      iconComponent.push(
+        <iconObject.html key={'html-icon'} height={50} width={50} />
+      );
     }
     if (gameInfo.builtWith.includes('CSS')) {
-      iconComponent.push(<iconObject.css height={50} width={50} />);
+      iconComponent.push(
+        <iconObject.css key={'css-icon'} height={50} width={50} />
+      );
     }
     if (gameInfo.builtWith.includes('Vanilla Javascript')) {
-      iconComponent.push(<iconObject.js height={50} width={50} />);
+      iconComponent.push(
+        <iconObject.js key={'vjs-icon'} height={50} width={50} />
+      );
     }
     if (gameInfo.builtWith.includes('React')) {
-      iconComponent.push(<iconObject.react height={50} width={50} />);
+      iconComponent.push(
+        <iconObject.react key={'react-icon'} height={50} width={50} />
+      );
     }
     return iconComponent;
   };
