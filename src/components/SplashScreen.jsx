@@ -1,7 +1,7 @@
 import '../styles/splashscreen.css';
 import { ReactComponent as GithubIcon } from '../assets/icons/github-icon.svg';
 import { ReactComponent as TwitterIcon } from '../assets/icons/twitter-icon.svg';
-import Footer from './Footer';
+// import Footer from './Footer';
 import SignIn from './authentication/SignIn';
 import insertCoinImage from '../assets/icons/insert-coin-neon.png';
 import arcadeClubImage from '../assets/icons/arcade-games-neon.png';
