@@ -1,3 +1,8 @@
+.game-info {
+  /* background-image: url('../assets/icons/desktop-wallpaper-cyborg-cyberpunk-in-pink-plain-background-1920-x-1080-in-2020-robot-simple-background-cyberpunk-wire.jpg');  */
+  font-size: 12px;
+  padding: 5px;
+}
 .gamepage {
   background-size: cover;
   background-repeat: no-repeat;
@@ -65,4 +70,36 @@
 
 .reload-game__homepage {
   padding: 10px 15px;
+}
+
+
+.built-with {
+  font-size: 12px;
+  padding: 5px;
+}
+
+h2 {
+  padding: 8px;
+  font-size: 20px;
+}
+
+.are-you-ready {
+  padding: 10px;
+  font-size: 15px;
+  height: 8vh;
+  line-height: 1.5;
+}
+
+.gamepage-container {
+  display: flex;
+}
+
+.gamepage {
+  flex: 1;
+}
+
+.leaderboard {
+  flex: 1;
+  align-items: flex-start;
+  margin-top: -15px;
 }

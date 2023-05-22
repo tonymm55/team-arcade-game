@@ -80,7 +80,7 @@ const SplashScreen = ({ onChildClick }) => {
           </a>
           <div className="splashscreen__credits-icons">
             <a
-              href="https://github.com/tsv-stacks"
+              href="https://github.com/Matty92G"
               target={'_blank'}
               rel="noreferrer"
             >

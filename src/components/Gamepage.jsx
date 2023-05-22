@@ -82,6 +82,7 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
   };
 
   return (
+
     <div className="gamepage">
       <h2>{gameInfo.title}</h2>
       <p>{gameInfo.description}</p>
@@ -104,6 +105,7 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
       ) : (
         <p>Are you ready {localStorage.getItem('nickname')}?</p>
       )}
+
 
       <img
         src={StartButtonImage}
