@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 
 const Footer = () => {
   const [playAudio, setPlayAudio] = useState(false);
-  const music = useState(new Audio(Ambient)); //useMemo may be better
+  const [music, setMusic] = useState(new Audio(Ambient));
 
   const handleOnClick = () => {
     setPlayAudio(true);
@@ -18,9 +18,9 @@ const Footer = () => {
 
   useEffect(() => {
     if (playAudio) {
-      music.play;
+      music.play();
     } else {
-      music.pause;
+      music.pause();
     }
   }, [playAudio, music]);
 
