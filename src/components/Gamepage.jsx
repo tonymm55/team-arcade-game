@@ -93,7 +93,7 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
             </p>
           </div>
           <div className="gamepage__built-with">
-            <p>Built with:</p>
+            <p className="gamepage__built-with-text">Built with:</p>
             <div>{renderIcons()}</div>
           </div>
         </div>

@@ -69,7 +69,6 @@
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
-  background-color: rgba(165, 40, 130, 0.4);
 }
 
 .welcome-message__text {

@@ -43,10 +43,10 @@
 }
 
 .gamepage__start-text {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin: 25px auto;
   font-size: 20px;
   font-style: italic;
+  max-width: 65%;
 }
 
 .ninja-game-embed {
@@ -75,6 +75,10 @@
   display: block;
   background-color: rgba(0, 0, 0, 0.25);
   border: 5px solid #cfaa01;
+}
+
+.gamepage__built-with-text {
+  margin-bottom: 5px;
 }
 
 .return__homepage-btn {
