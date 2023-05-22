@@ -66,7 +66,6 @@ const Homepage = () => {
             class="homepage__swiper-container"
             slides-per-view="1"
             navigation="true"
-            //   pagination="true"
             thumbs-swiper=".homepage__thumbs"
           >
             {gameData.map((game) => {

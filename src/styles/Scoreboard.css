@@ -59,6 +59,7 @@
   padding: 9px;
   font-size: 20px;
   margin: 0px;
+  font-style: italic;
   text-shadow: -1px -1px 0 var(--ultra-pink), 1px -1px 0 var(--ultra-pink),
     -1px 1px 0 var(--ultra-pink), 1px 1px 0 var(--ultra-pink);
 }

@@ -1,5 +1,3 @@
-https://ansimuz.itch.io/cyberpunk-street-environment - Art Assets
-
 # Credits
 
 ## 2D Fighting Game
@@ -16,3 +14,7 @@ https://ansimuz.itch.io/cyberpunk-street-environment - Art Assets
 - `Slime Enemy` by [Wars\_\_Vault](https://warsvault.itch.io/high-fantasy-slime-enemy)
 
 - `Pixel Game Life Bar` by [arybickii](https://www.123rf.com/profile_arybickii)
+
+## Steampunk Game
+
+## Tetris Game

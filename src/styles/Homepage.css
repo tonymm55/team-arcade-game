@@ -26,11 +26,7 @@
 
 .homepage__swiper-container {
   height: 100%;
-  background-color: #16e8ec;
-  /*   width: 71vw;
-  height: 32vh;
-  background-color: #16e8ec;
-  padding: 1px; */
+  background-color: rgba(242, 21, 117, 0.65);
 }
 
 swiper-slide {
@@ -48,20 +44,21 @@ swiper-slide {
 
 .swiper-slide-thumb-active {
   opacity: 1;
-  background: #16e8ec;
+  background: rgba(22, 232, 236, 0.9);
 }
 
 .homepage__title-center {
   font-family: 'Press Start 2P', cursive;
   text-align: center;
-  background-color: #f21575;
+  /* background-color: rgba(242, 21, 117, 0.8); */
   font-size: 32px;
   margin: 10px auto;
   padding: 10px;
 }
 
 .homepage__swiper-container {
-  background-color: #f21575;
+  /* background-color: rgba(242, 21, 117, 0.8); */
+  height: auto;
   /*   height: 60vh; */
 }
 
@@ -99,22 +96,6 @@ swiper-slide {
 /* .homepage__swiper-thumb-img:hover {
   animation: shake 0.4s ease-in-out infinite;
 } */
-
-.homepage__swiper-slide--tetris {
-  background-color: #f21575;
-}
-
-.homepage__swiper-slide--steampunk {
-  background-color: #f21575;
-}
-
-.homepage__swiper-slide--runner {
-  background-color: #f21575;
-}
-
-.homepage__swiper-slide--samurai {
-  background-color: #f21575;
-}
 
 @keyframes shake {
   0% {

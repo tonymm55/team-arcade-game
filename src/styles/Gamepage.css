@@ -7,7 +7,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: #f21575;
   font-family: 'Press Start 2P', cursive;
   display: flex;
   flex-direction: column;
@@ -113,5 +112,6 @@
 }
 
 .gamepage__game-detail-description {
+  margin-top: 10px;
   margin-bottom: 25px;
 }
