@@ -92,6 +92,7 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
             </p>
           </div>
 
+
           <div>
             <img
               src={StartButtonImage}
@@ -100,7 +101,6 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
               id={`game-btn-${gameInfo.scoreboard}`}
               onClick={handleButtonClick}
             />
-
             {!localStorage.getItem('nickname') ? (
               <>
                 <p className="gamepage__start-text">
@@ -114,7 +114,6 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
             )}
           </div>
         </div>
-
         <div className="gamepage__game-scores">
           {gameInfo.scoreboard !== 'samurai' &&
             (gameStates.length === 0 ? (
