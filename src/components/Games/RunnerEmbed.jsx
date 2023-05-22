@@ -16,6 +16,10 @@ const RunnerEmbed = () => {
         setGameScore(runnerScore);
       }
 
+      // if (!localStorage.getItem('nickname')) {
+      //   window.prompt('ya nasty');
+      // }
+
       const data = {
         name: localStorage.getItem('nickname'),
         score: runnerScore,
