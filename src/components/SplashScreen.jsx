@@ -144,7 +144,7 @@ const SplashScreen = ({ onChildClick }) => {
         </div>
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

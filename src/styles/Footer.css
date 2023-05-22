@@ -17,3 +17,9 @@
   cursor: pointer;
   background-color: rgba(165, 40, 130, 0.4);
 }
+
+.centered {
+  font-size: 85%;
+  width: 40px;
+  font-display: center;
+}
