@@ -25,9 +25,6 @@ const SteamPunkEmbed = () => {
         }
       }
 
-      console.log(localStorage.getItem('nickname'));
-      console.log(steamPunkScore);
-
       const data = {
         name: localStorage.getItem('nickname'),
         score: steamPunkScore,
