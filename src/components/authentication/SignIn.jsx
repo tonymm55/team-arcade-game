@@ -5,7 +5,7 @@ const SignIn = () => {
     return (
       <div className="SignIn">
         <button className="login-with-google-btn" onClick={signInWithGoogle}>
-          Sign In
+          sign in
         </button>
       </div>
     );

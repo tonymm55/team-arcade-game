@@ -1,0 +1,65 @@
+.scoreboard {
+  color: white;
+}
+
+.scoreboard__score {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.scoreboard__position {
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.scoreboard__img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: var(--ultra-pink) 1px solid;
+}
+
+.scoreboard__userscore {
+  /* column-width: 0px; */
+  min-width: 50px;
+}
+
+.scoreboard__username {
+  column-width: 150px;
+  width: 250px;
+  text-align: left;
+}
+
+.scoreboard__userdate {
+  margin-right: 5px;
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: -2px;
+  /* column-width: 100px; */
+  width: 130px;
+  font-size: 15px;
+}
+
+.scoreboard__userscore,
+.scoreboard__userdate {
+  text-align: right;
+}
+
+.scoreboard__entry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 16px;
+  border-bottom: 3px solid var(--tyrian-purple);
+}
+
+.scoreboard__title {
+  padding: 9px;
+  font-size: 20px;
+  margin: 0px;
+  font-style: italic;
+  text-shadow: -1px -1px 0 var(--ultra-pink), 1px -1px 0 var(--ultra-pink),
+    -1px 1px 0 var(--ultra-pink), 1px 1px 0 var(--ultra-pink);
+}

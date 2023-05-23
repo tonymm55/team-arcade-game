@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
 import axios from 'axios';
 
 const RunnerEmbed = () => {
@@ -15,8 +16,14 @@ const RunnerEmbed = () => {
         setGameScore(runnerScore);
       }
 
-      console.log(localStorage.getItem('nickname'));
-      console.log(runnerScore);
+      if (!localStorage.getItem('nickname')) {
+        const userInput = window.prompt(
+          'Please enter a name to submit your score!'
+        );
+        if (userInput) {
+          localStorage.setItem('nickname', userInput);
+        }
+      }
 
       const data = {
         name: localStorage.getItem('nickname'),
@@ -26,9 +33,21 @@ const RunnerEmbed = () => {
 
       axios
         .post('https://arcade-backend.onrender.com/scoreboard/run/add', data)
-        .then((response) => console.log(response))
+        .then((response) => {
+          toast.promise(Promise.resolve(response), {
+            pending: 'Loading...',
+            success: 'Score submitted!',
+            closeOnClick: true,
+            draggable: false,
+            autoClose: 3000,
+          });
+        })
         .catch((err) => {
-          console.log(err);
+          toast.error(`${'Score not Submitted: ' + err.message}`, {
+            closeOnClick: true,
+            draggable: false,
+            autoClose: 3000,
+          });
         });
     }
 
@@ -38,6 +57,7 @@ const RunnerEmbed = () => {
       window.removeEventListener('message', handleMessage);
     };
   }, [gameScore]);
+
   return (
     <>
       <iframe

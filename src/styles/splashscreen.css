@@ -1,3 +1,11 @@
+:root {
+  --fandango: rgb(165, 40, 130);
+  --penn-blue: #0d1945ff;
+  --tyrian-purple: #711740ff;
+  --ultra-pink: #ff69fdff;
+  --polynesian-blue: #0c4693ff;
+}
+
 .splashscreen {
   width: 100vw;
   height: 100vh;
@@ -10,11 +18,103 @@
   padding-top: 20px;
 }
 
-* {
+/* * {
   border: 1px solid red;
+} */
+
+.splashscreen__credits {
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: -1px -1px 0 var(--ultra-pink), 1px -1px 0 var(--ultra-pink),
+    -1px 1px 0 var(--ultra-pink), 1px 1px 0 var(--ultra-pink);
+  width: 310px;
 }
 
-.splashscreen__credits-tarndeep {
+.splashscreen__credits--clean-text {
   color: white;
   text-decoration: none;
+}
+
+.splashscreen__credits--clean-text:hover {
+  color: var(--tyrian-purple);
+}
+
+.splashscreen__credits-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.splashscreen__credits-created {
+  margin-bottom: 10px;
+}
+
+.splashscreen__credits-icons-img:hover {
+  color: var(--ultra-pink);
+}
+
+.splashscreen__insert-coin {
+  cursor: pointer;
+  width: 300px;
+  height: 200px;
+  animation: pulse 2s infinite;
+}
+
+.splashscreen__game-icon {
+  width: 250px;
+  height: 250px;
+}
+
+.welcome-message {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.welcome-message__text {
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: -2px -2px 0 var(--ultra-pink), 2px -2px 0 var(--ultra-pink),
+    -2px 2px 0 var(--ultra-pink), 2px 2px 0 var(--ultra-pink);
+  font-size: 20px;
+}
+
+.welcome-message__profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  border: 2px solid var(--ultra-pink);
+  margin: 0 15px;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media only screen and (min-aspect-ratio: 1/3) {
+  .splashscreen {
+    background-image: url('/splash-screen.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media only screen and (min-aspect-ratio: 9/5) {
+  .splashscreen {
+    background-image: url('/splash-screen-CROP.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 }
