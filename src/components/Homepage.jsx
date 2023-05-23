@@ -16,6 +16,11 @@ import TetrisEmbed from './Games/TetrisEmbed';
 import SteamPunkEmbed from './Games/SteamPunkEmbed';
 import arcadeLogo from '../assets/icons/arcade-games-neon.png';
 
+import runnerThumb from '../assets/games/runner-thumb.png';
+import tetrisThumb from '../assets/games/tetris-thumb-crop.png';
+import samuraiThumb from '../assets/games/samurai-thumb.png';
+import steamThumb from '../assets/games/steam-thumb.png';
+
 register();
 
 const Homepage = () => {
@@ -91,21 +96,42 @@ const Homepage = () => {
             watch-slides-progress="true"
             space-between={10}
           >
-            {gameData.map((game) => {
-              return (
-                <swiper-slide
-                  class={`homepage__swiper-thumb--pointer homepage__swiper-thumb--${game.scoreboard}`}
-                  key={game.scoreboard}
-                >
-                  <img
-                    className={
-                      'homepage__swiper-thumb--pointer  homepage__swiper-thumb-img'
-                    }
-                    src={game.thumbImg}
-                  />
-                </swiper-slide>
-              );
-            })}
+            <swiper-slide class="homepage__swiper-thumb--pointer homepage__swiper-thumb--run">
+              <img
+                className={
+                  'homepage__swiper-thumb--pointer  homepage__swiper-thumb-img'
+                }
+                src={runnerThumb}
+                alt="Runner Game Thumbnail Image"
+              />
+            </swiper-slide>
+            <swiper-slide class="homepage__swiper-thumb--pointer homepage__swiper-thumb--tetris">
+              <img
+                className={
+                  'homepage__swiper-thumb--pointer  homepage__swiper-thumb-img'
+                }
+                src={tetrisThumb}
+                alt="Tetris Game Thumbnail Image"
+              />
+            </swiper-slide>
+            <swiper-slide class="homepage__swiper-thumb--pointer homepage__swiper-thumb--samurai">
+              <img
+                className={
+                  'homepage__swiper-thumb--pointer  homepage__swiper-thumb-img'
+                }
+                src={samuraiThumb}
+                alt="Samurai Game Thumbnail Image"
+              />
+            </swiper-slide>
+            <swiper-slide class="homepage__swiper-thumb--pointer homepage__swiper-thumb--steampunk">
+              <img
+                className={
+                  'homepage__swiper-thumb--pointer  homepage__swiper-thumb-img'
+                }
+                src={steamThumb}
+                alt="Steam Punk Game Thumbnail Image"
+              />
+            </swiper-slide>
           </swiper-container>
         </div>
       )}
