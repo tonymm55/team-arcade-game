@@ -61,7 +61,7 @@ const TetrisEmbed = () => {
     <iframe
       title="Tetris Game"
       src="https://react-tetris-project.netlify.app"
-      width={700}
+      width={1400}
       height={700}
       className="tetris-game-embed"
     ></iframe>
