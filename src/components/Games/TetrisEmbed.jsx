@@ -62,7 +62,7 @@ const TetrisEmbed = () => {
       title="Tetris Game"
       src="https://react-tetris-project.netlify.app"
       width={700}
-      height={900}
+      height={700}
       className="tetris-game-embed"
     ></iframe>
   );
