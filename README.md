@@ -1,9 +1,13 @@
-# team-arcade-game
+# Welcome to the Arcade Game Room
 
-Command Shift Final Project
+### Live Page:
 
-docs for libraries:
+## About
 
-- https://swiperjs.com/element#installation
+## Dependencies
 
-branch for merging
+## Installation
+
+## Contributing Guidelines
+
+## Contact Information
