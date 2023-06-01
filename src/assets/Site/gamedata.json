@@ -4,7 +4,7 @@
     "description": "Jump over the incoming slime enemies by using the arrow keys on your keyboard. You have 3 lives and you lose a life every time you collide with an enemy. The game ends if you lose all three lives.",
     "builtWith": ["HTML", "CSS", "Vanilla Javascript"],
     "backgroundImg": "",
-    "thumbImg": "/src/assets/games/runner-thumb.png",
+    "thumbImg": "/runner-thumb.png",
     "scoreboard": "run",
     "link": "https://arcade-game-runner.netlify.app"
   },
@@ -13,7 +13,7 @@
     "description": "Tetrominos fall down from the top of the stage. The aim of the game is to make a complete horizontal row of tetrominos to score points, the more points you score the faster blocks fall. Tetrominos can be moved left, right and rotated.",
     "builtWith": ["React"],
     "backgroundImg": "",
-    "thumbImg": "/src/assets/games/tetris-thumb-crop.png",
+    "thumbImg": "/tetris-thumb-crop.png",
     "scoreboard": "tetris",
     "link": "https://react-tetris-project.netlify.app"
   },
@@ -22,7 +22,7 @@
     "description": "A 2D Two Player Fighting Game with local co-op support. Defeat your opponent by reducing their health to zero. Each successful attack reduces the opponent's health by 25 points. The game ends when either player's health reaches zero. If the time runs out, the player with the most health remaining is declared the winner.",
     "builtWith": ["HTML", "CSS", "Vanilla Javascript"],
     "backgroundImg": "",
-    "thumbImg": "/src/assets/games/samurai-thumb.png",
+    "thumbImg": "/samurai-thumb.png",
     "scoreboard": "samurai",
     "link": "https://ninja-fighting-game-2d.netlify.app"
   },
@@ -30,7 +30,7 @@
     "title": "Steam Punk",
     "builtWith": ["HTML", "CSS", "Vanilla Javascript"],
     "backgroundImg": "",
-    "thumbImg": "/src/assets/games/steam-thumb.png",
+    "thumbImg": "/steam-thumb.png",
     "description": "A 2D single player shooting game where the sentinel seahorse fires projectiles at different enemy types. Enemies consist of Drones, Hive Whales and Night Anglers. Points are accumulated based on number of enemies defeated within the game time of 30 seconds. Ammunition 'power ups' are available for making contact with Lucky Fish. The winner is the player with the most points after 30s",
     "scoreboard": "steampunk",
     "link": "https://steam-punk-project.netlify.app"
