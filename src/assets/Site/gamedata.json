@@ -40,7 +40,7 @@
     "description": "Asteroids but after the heat death of the universe",
     "builtWith": ["React"],
     "backgroundImg": "",
-    "thumbImg": "./src/assets/games/asteroids-thumb-crop.png",
+    "thumbImg": "./src/assets/games/asteroids-thumb.png",
     "scoreboard": "asteroids",
     "link": "https://react-asteroids-project.netlify.app"
   }
