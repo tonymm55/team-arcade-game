@@ -34,5 +34,14 @@
     "description": "A 2D single player shooting game where the sentinel seahorse fires projectiles at different enemy types. Enemies consist of Drones, Hive Whales and Night Anglers. Points are accumulated based on number of enemies defeated within the game time of 30 seconds. Ammunition 'power ups' are available for making contact with Lucky Fish. The winner is the player with the most points after 30s",
     "scoreboard": "steampunk",
     "link": "https://steam-punk-project.netlify.app"
+  },
+  {
+    "title": "Asteroids",
+    "description": "Asteroids but after the heat death of the universe",
+    "builtWith": ["React"],
+    "backgroundImg": "",
+    "thumbImg": "./src/assets/games/asteroids-thumb-crop.png",
+    "scoreboard": "asteroids",
+    "link": "https://react-asteroids-project.netlify.app"
   }
 ]

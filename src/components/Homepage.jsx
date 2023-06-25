@@ -15,6 +15,7 @@ import NinjaEmbed from './Games/NinjaEmbed';
 import TetrisEmbed from './Games/TetrisEmbed';
 import SteamPunkEmbed from './Games/SteamPunkEmbed';
 import arcadeLogo from '../assets/icons/arcade-games-neon.png';
+import AsteroidsEmbed from './Games/AsteroidsEmbed';
 
 register();
 
@@ -46,6 +47,8 @@ const Homepage = () => {
       return <TetrisEmbed />;
     } else if (buttonId === 'game-btn-steampunk') {
       return <SteamPunkEmbed />;
+    } else if (buttonId === 'game-btn-asteroids') {
+      return <AsteroidsEmbed />;
     }
   };
 
