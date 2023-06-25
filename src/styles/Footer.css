@@ -1,23 +1,25 @@
 .footer {
   display: flex;
   width: 85vw;
-  /* delete for production */
-  border: 1px #be0072 solid;
-  height: 60px;
+  height: auto;
   vertical-align: center;
-  justify-content: space-between;
-}
-
-/* delete for production */
-.footer * {
-  border: 1px #be0072 solid;
+  justify-content: flex-end;
 }
 
 .footer__image-aspect {
+  display: block;
+  background-color: rgba(165, 40, 130, 0.9);
   width: 40px;
   height: 40px;
 }
 
 .footer__image-aspect:hover {
   cursor: pointer;
+  background-color: rgba(165, 40, 130, 0.4);
+}
+
+.centered {
+  font-size: 85%;
+  width: 40px;
+  font-display: center;
 }

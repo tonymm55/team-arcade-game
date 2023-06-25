@@ -8,6 +8,7 @@ import { ReactComponent as ReactIcon } from '../assets/icons/react-icon.svg';
 import '../styles/Gamepage.css';
 import Scoreboard from './Scoreboards/Scoreboard';
 import StartButtonImage from '../assets/icons/press-start-icon-removebg-preview.png';
+import samuraiGif from '../assets/games/samurai-gif.gif';
 // import fakescore from './Scoreboards/scoredata.json';
 
 const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
@@ -66,62 +67,69 @@ const Gamepage = ({ props, handleGameSelected, handleButtonId }) => {
 
   const renderIcons = () => {
     let iconComponent = [];
-    console.log(`<${iconObject.html}/>`);
-    console.log(gameInfo.builtWith);
-
     if (gameInfo.builtWith.includes('HTML')) {
-      iconComponent.push(iconObject.html);
+      iconComponent.push(<iconObject.html height={50} width={50} />);
     }
     if (gameInfo.builtWith.includes('CSS')) {
-      iconComponent.push(iconObject.css);
+      iconComponent.push(<iconObject.css height={50} width={50} />);
     }
     if (gameInfo.builtWith.includes('Vanilla Javascript')) {
-      iconComponent.push(iconObject.js);
+      iconComponent.push(<iconObject.js height={50} width={50} />);
     }
     if (gameInfo.builtWith.includes('React')) {
-      iconComponent.push(iconObject.react);
+      iconComponent.push(<iconObject.react height={50} width={50} />);
     }
-
-    console.log(iconComponent);
+    return iconComponent;
   };
 
   return (
     <div className="gamepage">
-      <h2>{gameInfo.title}</h2>
-      <p>{gameInfo.description}</p>
-
-      {gameInfo.scoreboard !== 'samurai' &&
-        (gameStates.length === 0 ? (
-          <p>Fetching highscores...</p>
-        ) : (
-          <Scoreboard props={gameStates} gameData={gameInfo.scoreboard} />
-        ))}
-
-      <p>Built with:</p>
-      <p>{renderIcons()}</p>
-      <div className="icon-container">
-        <Html height={50} width={50} />
-        <CSSIcon height={50} width={50} />
-        <VJSIcon height={50} width={50} />
-        <ReactIcon height={50} width={50} />
+      <div className="gamepage__scores-details">
+        <div className="gamepage__game-details">
+          <div>
+            <h2 className="gamepage__game-detail-title">{gameInfo.title}</h2>
+            <p className="gamepage__game-detail-description">
+              {gameInfo.description}
+            </p>
+          </div>
+          <div className="gamepage__built-with">
+            <p className="gamepage__built-with-text">Built with:</p>
+            <div>{renderIcons()}</div>
+          </div>
+        </div>
+        <div className="gamepage__game-scores">
+          {gameInfo.scoreboard !== 'samurai' &&
+            (gameStates.length === 0 ? (
+              <p>Fetching highscores...</p>
+            ) : (
+              <Scoreboard props={gameStates} gameData={gameInfo.scoreboard} />
+            ))}
+          {gameInfo.scoreboard === 'samurai' && (
+            <img className="samurai-gif" src={samuraiGif} />
+          )}
+        </div>
       </div>
 
-      {!localStorage.getItem('nickname') ? (
-        <>
-          {/* <NickName setNickname={setNickname} /> */}
-          <p>Sign in to set your user name and submit your highscores!</p>
-        </>
-      ) : (
-        <p>Are you ready {localStorage.getItem('nickname')}?</p>
-      )}
-
-      <img
-        src={StartButtonImage}
-        alt="Start Game"
-        className="gamepage__start-btn"
-        id={`game-btn-${gameInfo.scoreboard}`}
-        onClick={handleButtonClick}
-      />
+      <div>
+        <img
+          src={StartButtonImage}
+          alt="Start Game"
+          className="gamepage__start-btn"
+          id={`game-btn-${gameInfo.scoreboard}`}
+          onClick={handleButtonClick}
+        />
+        {!localStorage.getItem('nickname') ? (
+          <>
+            <p className="gamepage__start-text">
+              Sign in to set your user name and submit your highscores!
+            </p>
+          </>
+        ) : (
+          <p className="gamepage__start-text">
+            Are you ready {localStorage.getItem('nickname')}?
+          </p>
+        )}
+      </div>
     </div>
   );
 };

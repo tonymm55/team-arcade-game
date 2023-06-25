@@ -1,10 +1,36 @@
+.game-info {
+  font-size: 12px;
+  padding: 5px;
+}
+
 .gamepage {
-  /* background-image: url('../assets/icons/desktop-wallpaper-cyborg-cyberpunk-in-pink-plain-background-1920-x-1080-in-2020-robot-simple-background-cyberpunk-wire.jpg');  */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: #f21575;
   font-family: 'Press Start 2P', cursive;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.gamepage__scores-details {
+  display: flex;
+}
+
+.samurai-gif {
+  height: 400px;
+}
+
+.gamepage__game-details {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.gamepage__game-scores {
+  width: 60%;
 }
 
 .gamepage__start-btn {
@@ -12,6 +38,15 @@
   cursor: pointer;
   width: 100px;
   height: 100px;
+  margin: 0 auto;
+  animation: pulse 2s infinite;
+}
+
+.gamepage__start-text {
+  margin: 25px auto;
+  font-size: 20px;
+  font-style: italic;
+  max-width: 65%;
 }
 
 .ninja-game-embed {
@@ -42,6 +77,10 @@
   border: 5px solid #cfaa01;
 }
 
+.gamepage__built-with-text {
+  margin-bottom: 5px;
+}
+
 .return__homepage-btn {
   display: flex;
   align-items: center;
@@ -66,4 +105,21 @@
 
 .reload-game__homepage {
   padding: 10px 15px;
+}
+
+.built-with {
+  font-size: 12px;
+  padding: 5px;
+}
+
+.gamepage__game-detail-title {
+  padding: 10px 0px;
+  font-size: 20px;
+  font-style: italic;
+  animation: jiggle 4s infinite linear;
+}
+
+.gamepage__game-detail-description {
+  margin-top: 10px;
+  margin-bottom: 25px;
 }

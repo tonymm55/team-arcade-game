@@ -53,8 +53,7 @@ const Homepage = () => {
     <main className="homepage">
       <header className="homepage__header">
         <img src={arcadeLogo} className="homepage__header-img"></img>
-        <h1>Arcade Game Room</h1>
-        <h2 className="homepage__title-center">Select Game</h2>
+        <h1 className="homepage__title-name">ARCADE GAME ROOM</h1>
       </header>
       <div className="user-bar">
         {nickname && <NickName setNickname={setNickname} />}
@@ -67,7 +66,6 @@ const Homepage = () => {
             class="homepage__swiper-container"
             slides-per-view="1"
             navigation="true"
-            //   pagination="true"
             thumbs-swiper=".homepage__thumbs"
           >
             {gameData.map((game) => {
