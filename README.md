@@ -1,3 +1,7 @@
+## Welcome to the Arcade Games Room Projet
+
+## Installation Instructions
+
 
 * Clone this repo
   * e.g. `gitclone https://github.com/tonymm55/team-arcade-game.git`
