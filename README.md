@@ -1,18 +1,3 @@
-# Welcome to the Arcade Game Room
-
-### Live Page:
-
-## About
-
-## Dependencies
-
-## Installation
-
-## Contributing Guidelines
-
-## Contact Information
-
-## Installation Instructions
 
 * Clone this repo
   * e.g. `gitclone https://github.com/tonymm55/team-arcade-game.git`
