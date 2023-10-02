@@ -7,7 +7,7 @@ const AsteroidsEmbed = () => {
 
   useEffect(() => {
     function handleAsteroids(event) {
-      if (event.origin !== 'https://react-Asteroids-project.netlify.app') {
+      if (event.origin !== 'https://matty92g-asteroids.netlify.app/') {
         return;
       }
 
