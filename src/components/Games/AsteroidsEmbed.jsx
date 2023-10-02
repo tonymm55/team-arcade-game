@@ -8,6 +8,7 @@ const AsteroidsEmbed = () => {
   useEffect(() => {
     function handleAsteroids(event) {
       if (event.origin !== 'https://matty92g-asteroids.netlify.app/') {
+        // if (event.origin !== 'http://127.0.0.1:5500/') {
         return;
       }
 
@@ -63,6 +64,7 @@ const AsteroidsEmbed = () => {
   return (
     <iframe
       title="Asteroids Game"
+      // src="http://127.0.0.1:5500/"
       src="https://matty92g-asteroids.netlify.app/"
       width={700}
       height={700}
