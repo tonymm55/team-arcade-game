@@ -63,8 +63,8 @@ const AsteroidsEmbed = () => {
   return (
     <iframe
       title="Asteroids Game"
-      src="https://react-asteroids-project.netlify.app"
-      width={700}
+      src="https://matty92g-asteroids.netlify.app/"
+      width={900}
       height={900}
       className="asteroids-game-embed"
     ></iframe>
