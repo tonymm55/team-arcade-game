@@ -89,7 +89,7 @@ const Homepage = () => {
           </swiper-container>
           <swiper-container
             class="homepage__thumbs"
-            slides-per-view="4"
+            slides-per-view="5"
             pagination="true"
             watch-slides-progress="true"
             space-between={10}
