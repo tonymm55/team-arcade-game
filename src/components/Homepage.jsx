@@ -92,7 +92,7 @@ const Homepage = () => {
             slides-per-view="5"
             pagination="true"
             watch-slides-progress="true"
-            space-between={10}
+            space-between={7}
           >
             {gameData.map((game) => {
               return (
