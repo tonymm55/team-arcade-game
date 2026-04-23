@@ -10,3 +10,8 @@
 * To start the app:
   * type: npm run dev
   * click on Local: `http://localhost:5173/`
+
+
+  ## Branch Notes
+
+  Deploy-Main is the branch that has been deployed to Netlify. Deploy is my working branch.
